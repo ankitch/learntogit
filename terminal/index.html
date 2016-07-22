@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Learn Git</title>
+		<script src="lib/termlib_min.js"></script>
+		<script src="lib/termlib_parser_min.js"></script>
+		<link rel="stylesheet" type="text/css" href="term_styles.css">
+	</head>
+	<body>
+		<div>
+			<script>
+			var term;
+			function foo() {
+				term = new Terminal( {handler: termHandler} );
+				term.open();
+
+				function termHandler() {
+					this.newLine();
+					var line = this.lineBuffer;
+					var splitted = line.split(" ");
+					var c = 0;
+					if (splitted[c] == "git"){
+						c++;
+						switch (splitted[c++]){
+							case "init":
+								this.write("Initializd");
+						}
+					} else {
+						this.write(splitted[c] + ": command not found");
+					}
+					this.prompt()
+				}
+
+			}
+			</script>
+			<a href="javascript:foo()">asd</a>
+			<div id="termDiv" style="position:absolute; visibility: hidden; z-index:1;"></div>
+
+		</div>
+	</body>
+</html>
