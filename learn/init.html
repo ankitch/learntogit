@@ -51,8 +51,9 @@
     </ul>
 
     <div class="container">
-
+      <!-- grid -->
       <div class="row">
+        <!-- instruction -->
         <div class="col m6">
           <h2>Learn</h2>
           <h4>Initializing a git repository</h4>
@@ -68,6 +69,7 @@
           </p>
           </p>
         </div>
+        <!-- terminal -->
         <div class="col m6">
           <h5>Try It!</h5>
           <div class="terminal-window" id="termWindow">
@@ -83,19 +85,33 @@
 
     </div>
 
+    <!-- modal for showing success -->
+    <div id="success-modal" class="modal">
+      <div class="modal-content success-modal">
+        <h3>SUCCESS!</h3>
+        <p>Congratulations! You have successfully initialized a repository</p>
+        <a class="waves-effect waves-light btn next-btn" href="status.html">Continue to next step</a>
+      </div>
+    </div>
 
 
    <script>
      // Initialize collapse button
     $(".button-collapse").sideNav();
+
     // Initialize collapsible (uncomment the line below if you use the dropdown variation)
     $('.collapsible').collapsible();
+
+    //run the terminal
     $('document').ready(function() {
       foo();
     });
    </script>
 
-   
+   <script>
+     //initialize an array of expected commands
+     expected = ['git init']
+   </script>
 
   </body>
 

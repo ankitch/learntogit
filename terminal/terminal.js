@@ -1,9 +1,11 @@
 var term;
-unstaged = ['alu.txt'];
-staged = [];
-currentBranch = 'master';
-branches = [];
+var unstaged = ['alu.txt'];
+var staged = [];
+var currentBranch = 'master';
+var branches = [];
+var expIndex = 0;
 
+//initialize the terminal
 function foo() {
     term = new Terminal(
         {
@@ -22,7 +24,7 @@ function foo() {
         this.newLine();
         var line = this.lineBuffer;
         var splitted = line.split(" ");
-        var c = 0;
+        var c = 0;  //counter to point to a word of command at a time
         if (splitted[c] == 'git'){
             c++;
             switch (splitted[c++]){
@@ -45,13 +47,27 @@ function foo() {
                     break;
                 case 'checkout':
                     this.write(switchBranch(splitted[c]));
-
+                    break;
+                default:
+                    this.write('git: \'' + splitted[c-1] + '\' is not a git command.')
 
             }
         } else {
             this.write(splitted[c] + ": command not found");
         }
         this.prompt();
+
+        //check user input for success
+        //if the input equals to the last expected command, fire off the success modal
+        //if not then check if the input equals to current index of expected.
+        //If it matches, then increment the index
+        if (line.indexOf(expected) == expected.length-1) {
+            $('#success-modal').openModal();
+        } else if (line.indexOf(expected) == expIndex) {
+            expIndex++;
+        }
+
+
     }
 
     //adjust termwindow according to size of terminal div

@@ -9,3 +9,22 @@ code {
   border-radius: 10px;
   color: #4caf50;
 }
+
+#success-modal {
+  width: 500px;
+}
+
+.success-modal h3 {
+  color: #4caf50;
+  text-align: center;
+}
+
+.success-modal p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.next-btn {
+  margin: 0 auto;
+  display: block;
+}
