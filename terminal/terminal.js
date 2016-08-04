@@ -9,8 +9,8 @@ function foo() {
         {
             x: 0,
             y: 0,
-            cols: 60,
-            rows: 5,
+            cols: 70,
+            rows: 18,
             termDiv: 'termDiv1',
             handler: termHandler
         }
@@ -54,6 +54,7 @@ function foo() {
         this.prompt();
     }
 
+    //adjust termwindow according to size of terminal div
     $('#termWindow').css(
         {
             'width': term.getDimensions().width + 'px',
@@ -84,7 +85,6 @@ function outStatus() {
         output.push(
             'Untracked files:',
             '\t\t(use "git add <file>..." to include in what will be committed)',
-            ' ',
             filesString
         );
     }

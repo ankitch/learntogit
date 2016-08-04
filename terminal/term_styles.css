@@ -12,6 +12,10 @@
 	background: #33d011;
 }
 
+td, th {
+	padding: 2px 5px;
+}
+
 .terminal-window {
 	visibility: hidden;
 	border-radius: 8px 8px 0 0;
