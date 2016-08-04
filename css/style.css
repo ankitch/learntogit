@@ -2,6 +2,10 @@
   font-size: 17px;
 }
 
+.container {
+  width: 80%;
+}
+
 code {
   background: #F2F2F2;
   font-size: 25px;

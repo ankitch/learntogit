@@ -11,7 +11,7 @@ function foo() {
         {
             x: 0,
             y: 0,
-            cols: 70,
+            cols: 60,
             rows: 18,
             termDiv: 'termDiv1',
             handler: termHandler
