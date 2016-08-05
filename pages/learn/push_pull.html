@@ -12,10 +12,6 @@
     <script src="../../terminal/lib/termlib_parser_min.js"></script>
     <script src="../../terminal/terminal.js"></script>
     <link rel="stylesheet" href="../../terminal/term_styles.css">
-    <style>
-
-    </style>
-
   </head>
 
   <body>
@@ -29,8 +25,8 @@
 
     <!-- sidebar ----->
     <ul id="slide-out" class="side-nav">
-      <li><a href="pages/intro.html">Introduction</a></li>
-      <li><a href="pages/install.html">Getting started</a></li>
+      <li><a href="#!">Introduction</a></li>
+      <li><a href="#!">Getting started</a></li>
       <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
           <li>
@@ -49,27 +45,33 @@
           </li>
         </ul>
       </li>
-      <li><a href="pages/quiz.html">Quiz</a></li>
     </ul>
+
     <div class="container">
       <!-- grid -->
       <div class="row">
-
         <!-- instruction -->
         <div class="col m6">
           <h2>Learn</h2>
-          <h4>Checking the status</h4>
+          <h4>Commiting changes</h4>
           <p class="instruct-text">
-            There is a feature of git that lets you check the current state of a project. It is helpful to know what things have been changed before committing.
+             To ensure you have added a file to staging area, check status of the project again by:
+             <code>
+               git status
+             </code>
           </p>
           <p class="instruct-text">
-            Enter the following command to check the status:<br>
-            <code>
-              git status
-            </code>
+            Notice there is new file added to be committed.
+            Now that you have successfully added a file to staging area, you are supposed to commit the change that you have made with a message.
+            Commiting is like keeping a log of changes made, which you can later go restore to.
+            To commit the change, enter the following the command <br>
+            <code>git commit -m "add cat.txt"</code>
+          <p>
+          <p class="instruct-text">
+            We are already in project folder. Go ahead and hit the command.
+          </p>
           </p>
         </div>
-
         <!-- terminal -->
         <div class="col m6">
           <h5>Try It!</h5>
@@ -90,8 +92,8 @@
     <div id="success-modal" class="modal">
       <div class="modal-content success-modal">
         <h3>SUCCESS!</h3>
-        <p>Congratulations! You have successfully checked the status of the project</p>
-        <a class="waves-effect waves-light btn next-btn" href="add.html">Continue to next step</a>
+        <p>Congratulations! You have successfully initialized a repository</p>
+        <a class="waves-effect waves-light btn next-btn" href="branch.html">Continue to next step</a>
       </div>
     </div>
 
@@ -110,8 +112,9 @@
    </script>
 
    <script>
+    staged = ['cat.txt'];
      //initialize an array of expected commands
-     expected = ['git status']
+     expected = ['git status', 'git commit -m "add cat.txt"']
    </script>
 
   </body>
