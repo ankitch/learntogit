@@ -32,3 +32,8 @@ code {
   margin: 0 auto;
   display: block;
 }
+
+.cheat {
+  font-size: 15px;
+  color:#171616;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Learn to Git</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+
+    <style>
+
+    </style>
+
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+        <a href="#" class="brand-logo center">Learn To Git</a>
+      </div>
+    </nav>
+
+    <!-- sidebar ----->
+    <ul id="slide-out" class="side-nav">
+      <li><a href="#!">Introduction</a></li>
+      <li><a href="#!">Getting started</a></li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="init.html">Initializing the repository</a></li>
+                <li><a href="add.html">Adding files</a></li>
+                <li><a href="status.html">Checking the status</a></li>
+                <li><a href="commit.html">Committing changes</a></li>
+                <li><a href="branch.html">Branching</a></li>
+                <li><a href="remote.html">Adding a Remote Repository</a></li>
+                <li><a href="remote.html">Pushing &amp; pulling </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="container">
+      <h4>Git Cheat Sheet</h4>
+
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content grey-text text-darken-2">
+              <span class="card-title cheat-title red-text text-darken-2">Create repositories</span>
+              <p>
+                <code class="cheat">git init [project-name]</code><br>
+                create a local repository
+              </p>
+              <br>
+              <p>
+                <code class="cheat">git clone [repo-url]</code><br>
+                clone a existing remote repository to local machine
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content grey-text text-darken-2">
+              <span class="card-title cheat-title red-text text-darken-2">Making changes</span>
+              <p>
+                <code class="cheat">git add [filename]</code><br>
+                add a file to staging area
+              </p>
+              <br>
+              <p>
+                <code class="cheat">git add --all</code><br>
+                add all files to staging area
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </div><!-- container -->
+
+
+   <script>
+     // Initialize collapse button
+    $(".button-collapse").sideNav();
+
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    $('.collapsible').collapsible();
+
+   </script>
+
+  </body>
+
+</html>
