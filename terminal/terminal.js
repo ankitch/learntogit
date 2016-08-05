@@ -1,5 +1,5 @@
 var term;
-var unstaged = ['alu.txt'];
+var unstaged = [];
 var staged = [];
 var currentBranch = 'master';
 var branches = [];
@@ -57,16 +57,17 @@ function foo() {
         }
         this.prompt();
 
-        //check user input for success
-        //if the input equals to the last expected command, fire off the success modal
-        //if not then check if the input equals to current index of expected.
-        //If it matches, then increment the index
-        if (line.indexOf(expected) == expected.length-1) {
-            $('#success-modal').openModal();
-        } else if (line.indexOf(expected) == expIndex) {
+        if (expected.indexOf(line) == expIndex) {
             expIndex++;
+            console.log('increment');
         }
 
+        console.log(expected.length);
+        if(expIndex == expected.length && expected.indexOf(line) > -1) {
+            console.log('success');
+            var openSuccess = function() {$('#success-modal').openModal();};
+            setTimeout(openSuccess, 2000);
+        }
 
     }
 
@@ -95,7 +96,6 @@ function outStatus() {
     if (unstaged.length > 0) {
         var filesString = "\t\t\t\t"
         $.each(unstaged, function (key, value) {
-            console.log(value);
             filesString += value + '\t\t';
         });
         output.push(
@@ -115,7 +115,7 @@ function outStatus() {
     }
 
     if (unstaged.length == 0 && staged.length == 0) {
-        output.push(' ', 'nothing to commit, working directory clean');
+        output.push('nothing to commit, working directory clean');
     }
 
     return output;
@@ -126,7 +126,6 @@ function addFile(file) {
         staged = staged.concat(unstaged);
         unstaged = [];
     } else {
-        console.log(unstaged.indexOf(file));
         if (unstaged.indexOf(file) <= -1) {
             return 'fatal: pathspec \'' + file + '\' did not match any files'
         }
@@ -150,7 +149,6 @@ function commit(msg) {
     } else {
         outStatus();
     }
-    console.log(output);
     return output;
 }
 
@@ -159,8 +157,6 @@ function createBranch(branch) {
 }
 
 function switchBranch(branch) {
-    console.log(branches);
-    console.log(branches.indexOf(branch));
     if (branches.indexOf(branch) <= -1) {
         return 'error: pathspec \'' + branch + '\' did not match any file(s) known to git.';
     }
