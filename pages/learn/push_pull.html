@@ -53,19 +53,19 @@
         <!-- instruction -->
         <div class="col m6">
           <h2>Learn</h2>
-          <h4>Commiting changes</h4>
+          <h4>Pusing &amp; pulling to and from remote repository</h4>
           <p class="instruct-text">
-             To ensure you have added a file to staging area, check status of the project again by:
+             Now that you hae successfully added a remote repository, it is time to push changes to the master branch of remote host so that everyone connected to remote host can see and pull changes
+          </p>
+          <p class="instruct-text">
+            To do this, enter the following command: <br>
              <code>
-               git status
+               git push -u origin master
              </code>
           </p>
           <p class="instruct-text">
-            Notice there is new file added to be committed.
-            Now that you have successfully added a file to staging area, you are supposed to commit the change that you have made with a message.
-            Commiting is like keeping a log of changes made, which you can later go restore to.
-            To commit the change, enter the following the command <br>
-            <code>git commit -m "add cat.txt"</code>
+            Likewise, if others have pushed changes to the remote host, you need to pull them to your local repository so you can start working on it. To pull, enter the following command: <br>
+            <code>git pull</code>
           <p>
           <p class="instruct-text">
             We are already in project folder. Go ahead and hit the command.
@@ -112,9 +112,8 @@
    </script>
 
    <script>
-    staged = ['cat.txt'];
      //initialize an array of expected commands
-     expected = ['git status', 'git commit -m "add cat.txt"']
+     expected = ['git push -u origin master', 'git pull']
    </script>
 
   </body>

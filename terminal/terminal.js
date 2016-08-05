@@ -51,6 +51,12 @@ function foo() {
                 case "remote":
                     this.write("success");
                     break;
+                case "push":
+                    this.write("changes you have commited have been successfully pushed");
+                    break;
+                case "pull":
+                    this.write("New changes have been successfully pulled");
+                    break;
                 default:
                     this.write('git: \'' + splitted[c-1] + '\' is not a git command.')
 
