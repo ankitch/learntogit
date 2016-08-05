@@ -48,6 +48,9 @@ function foo() {
                 case 'checkout':
                     this.write(switchBranch(splitted[c]));
                     break;
+                case "remote":
+                    this.write("success");
+                    break;
                 default:
                     this.write('git: \'' + splitted[c-1] + '\' is not a git command.')
 
