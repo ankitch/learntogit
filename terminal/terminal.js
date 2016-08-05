@@ -39,7 +39,9 @@ function foo() {
                     break;
                 case 'commit':
                     if(splitted[c++] == '-m') {
-                        this.write(commit(splitted[c]));
+                        var messageArray = splitted.slice(c);
+                        var messageString = messageArray.join(" ");
+                        this.write(commit(messageString));
                     }
                     break;
                 case 'branch':
@@ -49,10 +51,22 @@ function foo() {
                     this.write(switchBranch(splitted[c]));
                     break;
                 case "remote":
-                    this.write("success");
+                    var cmd = splitted.slice(c);
+                    var cmdString = cmd.join(" ");
+                    if (cmdString === "add origin \"https://github.com/learntogit/testrepo.git\"") {
+                        this.write("Success");
+                    } else {
+                        this.write("Incorrect. Try again");
+                    }
                     break;
                 case "push":
-                    this.write("changes you have commited have been successfully pushed");
+                    var cmd = splitted.slice(c);
+                    var cmdString = cmd.join(" ");
+                    if (cmdString === "-u origin master") {
+                        this.write("changes you have commited have been successfully pushed");
+                    } else {
+                        this.write("Incorrect. Try again");
+                    }
                     break;
                 case "pull":
                     this.write("New changes have been successfully pulled");
@@ -66,12 +80,12 @@ function foo() {
         }
         this.prompt();
 
+        //increase expIndex if input matches the expected value in expected array
+        //when the expIndex reaches the last of expected array and input matches,
+        //fire up the success modal
         if (expected.indexOf(line) == expIndex) {
             expIndex++;
-            console.log('increment');
         }
-
-        console.log(expected.length);
         if(expIndex == expected.length && expected.indexOf(line) > -1) {
             console.log('success');
             var openSuccess = function() {$('#success-modal').openModal();};
@@ -149,7 +163,7 @@ function addFile(file) {
 
 function commit(msg) {
     var output = [];
-    var trimmedMsg = msg.replace(/"'/g, "");
+    var trimmedMsg = msg.replace(/"/g, "");
     if (staged.length > 0) {
         output.push(
             '[' + currentBranch + '] ' + trimmedMsg,
