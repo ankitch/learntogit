@@ -57,17 +57,17 @@ function foo() {
         }
         this.prompt();
 
-        //check user input for success
-        //if the input equals to the last expected command, fire off the success modal
-        //if not then check if the input equals to current index of expected.
-        //If it matches, then increment the index
-        if (line.indexOf(expected) == expected.length-1) {
-            var openSuccess = function() {$('#success-modal').openModal();};
-            setTimeout(openSuccess, 2000);
-        } else if (line.indexOf(expected) == expIndex) {
+        if (expected.indexOf(line) == expIndex) {
             expIndex++;
+            console.log('increment');
         }
 
+        console.log(expected.length);
+        if(expIndex == expected.length && expected.indexOf(line) > -1) {
+            console.log('success');
+            var openSuccess = function() {$('#success-modal').openModal();};
+            setTimeout(openSuccess, 2000);
+        }
 
     }
 
