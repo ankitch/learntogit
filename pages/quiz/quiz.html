@@ -1,11 +1,54 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-      <title>QUIZ FOR NOOBS</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-
+    <meta charset="utf-8">
+    <title>Learn to Git</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/materialize.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script src="../../js/materialize.min.js"></script>
   </head>
+
   <body>
+
+    <!-- navbar -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+        <a href="#" class="brand-logo center">Learn To Git</a>
+      </div>
+    </nav>
+
+    <!-- sidebar ----->
+    <ul id="slide-out" class="side-nav">
+      <li><a href="../intro.html">Introduction</a></li>
+      <li><a href="../getting_started.html">Getting started</a></li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="../learn/init.html">Initializing the repository</a></li>
+                <li><a href="../learn/add.html">Adding files</a></li>
+                <li><a href="../learn/status.html">Checking the status</a></li>
+                <li><a href="../learn/commit.html">Committing changes</a></li>
+                <li><a href="../learn/branch.html">Branching</a></li>
+                <li><a href="../learn/remote.html">Adding a Remote Repository</a></li>
+                <li><a href="../learn/push_pull.html">Pushing &amp; pulling </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li><a href="../cheatsheet.html">CheatSheet</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="../terminology.html">Terminologies</a></li>
+    </ul>
+
+  <div class="container">
   <h2 class="quizHeader">Take a Quiz!</h2>
 
 	<table style="width:1000px">
@@ -144,12 +187,12 @@
     <div class="quizAnswers" id="correctAnswer4"></div>
     <div class="quizAnswers" id="correctAnswer5"></div>
       <div class="quizAnswers" id="correctAnswer6"></div>
-
 <!--show score upon submit-->
     <div>
     	<h2 class="quizScore" id="userScore"></h2>
     </div>
 	</div>
+</div><!--../container-->
   <script type="text/javascript">
   // scripts here:
 
@@ -229,6 +272,15 @@
 
   });
   </script>
+
+  <script>
+    // Initialize collapse button
+   $(".button-collapse").sideNav();
+
+   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+   $('.collapsible').collapsible();
+  </script>
+
 </body>
 
 </html>

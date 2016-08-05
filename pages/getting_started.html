@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Learn to Git</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+
+    <style>
+
+    </style>
+
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+        <a href="#" class="brand-logo center">Learn To Git</a>
+      </div>
+    </nav>
+
+    <!-- sidebar ----->
+    <ul id="slide-out" class="side-nav">
+      <li><a href="intro.html">Introduction</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="learn/init.html">Initializing the repository</a></li>
+                <li><a href="learn/add.html">Adding files</a></li>
+                <li><a href="learn/status.html">Checking the status</a></li>
+                <li><a href="learn/commit.html">Committing changes</a></li>
+                <li><a href="learn/branch.html">Branching</a></li>
+                <li><a href="learn/remote.html">Adding a Remote Repository</a></li>
+                <li><a href="learn/push_pull.html">Pushing &amp; pulling </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li><a href="cheatsheet.html">CheatSheet</a></li>
+      <li><a href="quiz/quiz.html">Quiz</a></li>
+      <li><a href="terminology.html">Terminologies</a></li>
+    </ul>
+
+    <div class="container">
+      <h3>Getting Started</h3>
+        <h4>Windows</h4>
+          <h2>How to download Git in Windows</h2>
+            <p class ="instruct-text">Open your browser and got to this link https://git-scm.com/downloads. The website will come as shown in this figure. Then click on the windows then the git setup will automatically start to download.</p>
+            <img src="../images/starting.png" height="300px" width="500px">
+              <br>
+            <p class="instruct-text">After downloading the setup file, double click on the file and the modal box will appear like shown.
+              <img src="../images/capture.png">
+
+        <h4>Linux</h4>
+        <h4>OSX</h4>
+
+
+    </div>
+
+
+
+
+   <script>
+     // Initialize collapse button
+    $(".button-collapse").sideNav();
+
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    $('.collapsible').collapsible();
+
+   </script>
+
+
+  </body>
+
+</html>
