@@ -37,3 +37,16 @@ code {
   font-size: 15px;
   color:#171616;
 }
+
+.head-logo {
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.head-text {
+}
+
+.sub-text {
+  color: rgba(0, 0, 0, 0.8);
+}
