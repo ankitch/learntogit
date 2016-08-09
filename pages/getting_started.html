@@ -24,6 +24,12 @@
         width: 1000px;
         position: absolute;
     }
+    /*css of id image used in slider*/
+    #imageosx {
+        height: 600px;
+        width: 1000px;
+        position: absolute;
+    }
     /*css of left icon used in slider for positioning*/
     #left_holder {
         height:  450px;
@@ -40,6 +46,7 @@
         right: 0px;
         top: 0px;
     }
+
     /*css of left icon*/
     #left {
         height: 50px;
@@ -103,12 +110,12 @@
           					<img src="../images/image0.png" id="image"/>
           <!-- starting of div class left_holder -->
           					<div id="left_holder" >
-          								<img onClick="slide(-1)" id= "left" src="../images/arrow_left.png"/>
+          								<img onClick="slides(-1)" id= "left" src="../images/arrow_left.png"/>
           								</div>
           <!-- ending of div class left_holder -->
           <!-- starting of div class right_holder -->
           						<div id="right_holder">
-          								<img onClick="slide(+1)" id ="right" src="../images/arrow_right.png"/>
+          								<img onClick="slides(+1)" id ="right" src="../images/arrow_right.png"/>
           								</div>
           <!-- ending of div class right_holder -->
           <!-- starting of javascript for sliding image-->
@@ -116,12 +123,12 @@
           					var imageCount = 0;
           					var total = 10;
 
-          					function slide(x) {
+          					function slides(x) {
           						var image = document.getElementById('image');
           						imageCount = imageCount + x;
           						if(imageCount > total){imageCount = 0;}
           						if(imageCount < 0){imageCount = total;}
-          						image.src = "../images/image"+ imageCount +".png";
+          						image.src = "../images/image"+ imageCount +".PNG";
           							}
 
           					</script>
@@ -136,12 +143,12 @@
                       <div id="container">
                     					<img src="../images/imageosx0.jpg" id="imageosx"/>
                     <!-- starting of div class left_holder -->
-                    					<div id="left_holder" >
+                    					<div id="left_holders" >
                     								<img onClick="slide(-1)" id= "left" src="../images/arrow_left.png"/>
                     								</div>
                     <!-- ending of div class left_holder -->
                     <!-- starting of div class right_holder -->
-                    						<div id="right_holder">
+                    						<div id="right_holders">
                     								<img onClick="slide(+1)" id ="right" src="../images/arrow_right.png"/>
                     								</div>
                     <!-- ending of div class right_holder -->
