@@ -8,27 +8,26 @@
     <link rel="stylesheet" href="../css/materialize.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/animate.css">
-    <script type="text/javascript" src="../js/jquery.min.js">
-    </script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script src="../js/materialize.min.js"></script>
 
     <style>
         /*css of div container*/
-        
+
         #container {
             height: 350px;
             margin: 20px auto;
             position: relative;
         }
         /*css of id image used in slider*/
-        
+
         .image {
             height: 310px;
             display: block;
             margin: 0 auto;
         }
         /*css of left icon used in slider for positioning*/
-        
+
         #left_holder {
             height: 450px;
             width: 100px;
@@ -36,7 +35,7 @@
             top: 0px;
         }
         /*css of right icon used in slider for positioning*/
-        
+
         #right_holder {
             height: 450px;
             width: : 100px;
@@ -44,8 +43,8 @@
             top: 0px;
         }
         /*css of left icon*/
-        
-        #left {
+
+        .left-arrow {
             height: 50px;
             width: 50px;
             position: absolute;
@@ -53,45 +52,45 @@
             left: 0px;
         }
         /*css of right icon*/
-        
-        #right {
+
+        .right-arrow {
             height: 50px;
             width: 50px;
             position: absolute;
             top: 50%;
             right: 0px;
         }
-        
+
         .pills {
             width: 100%;
         }
-        
+
         h4 {
             cursor: pointer;
         }
-        
+
         .main-header {
             font-weight: bold;
             font-size: 20px;
         }
-        
+
         h6 {
             font-size: 25px;
             font-weight: bold;
         }
-        
+
         #windows-div {
             display: none;
         }
-        
+
         #osx-div {
             display: none;
         }
-        
+
         #linux-div {
             display: none;
         }
-        
+
         .pills h4 {
             display: inline-block;
             text-align: center;
@@ -100,21 +99,26 @@
             font-size: 10px;
             font-style: bold;
         }
-        
+
         .pills .win {
             width: 33%;
             border-left: 1px solid black;
             font-weight: bold;
         }
-        
+
         .pills .lin {
             width: 33%;
             font-weight: bold;
         }
-        
+
         .pills .mac {
             width: 33%;
             font-weight: bold;
+        }
+
+        .term-text {
+          background: #eff0f1;
+          padding: 2px;
         }
     </style>
 
@@ -156,128 +160,106 @@
     </ul>
 
     <div class="container">
+
         <h3 class="main-header">Getting Started</h3>
         <div class="pills">
             <h4 class="win" id="wind">Windows</h4>
             <h4 class="lin" id="linux">Linux</h4>
             <h4 class="mac" id="osx">OSX</h4>
         </div>
+
+        <!-- windows section -->
         <div id="windows-div">
             <h6>How to download Git in Windows</h6>
-            <p class="instruct-text">Open your browser and got to this link. <a href="https://git-scm.com/downloads" target="_ ">https://git-scm.com/downloads</a> The website will come as shown in this figure. Then click on the windows then the git setup will automatically start to download.</p>
+            <p class="instruct-text">You can find the installer on <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a> Follow the slider below to install git after you run the installer.
             <div id="container">
-
                 <img src="../images/image0.png" class="image" />
-                <!-- starting of div class left_holder -->
+
                 <div id="left_holder">
-                    <img onClick="slides(-1)" id="left" src="../images/arrow_left.png" / </div>
-                    <!-- ending of div class left_holder -->
-                    <!-- starting of div class right_holder -->
-                    <div id="right_holder">
-                        <img onClick="slides(+1)" id="right" src="../images/arrow_right.png" />
-                    </div>
+                    <img onClick="windowSlider.slide(-1)" class="left-arrow" src="../images/arrow_left.png">
+                </div>
+
+                <div id="right_holder">
+                    <img onClick="windowSlider.slide(+1)" class="right-arrow" src="../images/arrow_right.png" />
                 </div>
             </div>
-            <!-- ending of div class right_holder -->
-            <!---->
+        </div>
 
-            <!-- starting of javascript for sliding image-->
-            <script type="text/javascript">
-                var imageCount = 0;
-                var total = 10;
+        <!-- linux section -->
+        <div id="linux-div">
+          <h6>How to download Git in Linux</h6>
+          <p class="instruct-text">In debian-based linux OS, open terminal and type <span class="term-text">sudo apt-get install git</span>. The process is shown clearly in the slider below you are supposed to follow</p>
+          <div id="container">
+            <img src="../images/imagelinx0.png" class="image" />
+            <!-- starting of div class left_holder -->
+            <div id="left_holders">
+              <img onClick="linuxSlider.slide(-1)" class="left-arrow" src="../images/arrow_left.png" />
+            </div>
+            <!-- ending of div class left_holder -->
+            <!-- starting of div class right_holder -->
+            <div id="right_holders">
+              <img onClick="linuxSlider.slide(+1)" class="right-arrow" src="../images/arrow_right.png" />
+            </div>
+          </div>
+        </div>
 
-                function slides(x) {
-                    var image = document.getElementsByClassName('image')[0];
-                    imageCount = imageCount + x;
-                    if (imageCount > total) {
-                        imageCount = 0;
-                    }
-                    if (imageCount < 0) {
-                        imageCount = total;
-                    }
-                    image.src = "../images/image" + imageCount + ".PNG";
+        <!-- OSX section -->
+        <div id="osx-div">
+            <h6>How to download Git in OSX</h6>
+            <p class="instruct-text">You can find the installer on <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a> Follow the slider below to install git after you run the installer.</p>
+            <div id="container">
+                <img src="../images/imageosx0.png" class="image" />
+                <div id="left_holders">
+                    <img onClick="osxSlider.slide(-1)" class="left-arrow" src="../images/arrow_left.png" />
+                </div>
+                <div id="right_holders">
+                    <img onClick="osxSlider.slide(+1)" class="right-arrow" src="../images/arrow_right.png" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+        <div class="container">
+
+        </div>
+
+        <!-- script for slider -->
+        <script type="text/javascript">
+            var Slider = function(total, img, num) {
+              this.count = 0;
+              this.total = total;
+              this.img = img;
+              this.slide = function(x) {
+                var image = document.getElementsByClassName('image')[num];
+                // var image = $('.image').eq(num);
+                this.count += x;
+                console.log(this.count);
+                console.log(this.total);
+
+                if (this.count >= this.total) {
+                  $('.right-arrow').eq(num).css('display', 'none');
+                } else {
+                  $('.right-arrow').eq(num).css('display', 'block');
                 }
-            </script>
-            <!-- ending of javascript -->
-        </div>
 
-        <!-- OSX-->
-        <div class="container">
-            <div id="osx-div">
-                <h6>How to download Git in OSX</h6>
-                <p class="instruct-text">Open your browser and got to this link. <a href="https://git-scm.com/downloads" target="_ ">https://git-scm.com/downloads</a> The website will come as shown in this figure. Then click on the OSX then the git setup will automatically start to download.</p>
-                <div id="container">
-                    <img src="../images/imageosx0.jpg" class="image" />
-                    <!-- starting of div class left_holder -->
-                    <div id="left_holders">
-                        <img onClick="slide(-1)" id="left" src="../images/arrow_left.png" />
-                    </div>
-                    <!-- ending of div class left_holder -->
-                    <!-- starting of div class right_holder -->
-                    <div id="right_holders">
-                        <img onClick="slide(+1)" id="right" src="../images/arrow_right.png" />
-                    </div>
-                </div>
-
-                <!-- ending of div class right_holder -->
-                <!-- starting of javascript for sliding image-->
-                <script type="text/javascript">
-                    var imageCount = 0;
-                    var total = 5;
-
-                    function slide(x) {
-                        var image = document.getElementsByClassName('image')[1];
-                        imageCount = imageCount + x;
-                        if (imageCount > total) {
-                            imageCount = 0;
-                        }
-                        if (imageCount < 0) {
-                            imageCount = total;
-                        }
-                        image.src = "../images/imageosx" + imageCount + ".jpg";
-                    }
-                </script>
-            </div>
-        </div>
-        <div class="container">
-            <div id="linux-div">
-                <h6>How to download Git in Linux</h6>
-                <p class="instruct-text">Open your browser and got to this link. <a href="https://git-scm.com/downloads" target="_ ">https://git-scm.com/downloads</a> The website will come as shown in this figure. Then click on the OSX then the git setup will automatically start to download.</p>
-                <div id="container">
-                    <img src="../images/imagelinx0.png" class="image" />
-                    <!-- starting of div class left_holder -->
-                    <div id="left_holders">
-                        <img onClick="slide(-1)" id="left" src="../images/arrow_left.png" />
-                    </div>
-                    <!-- ending of div class left_holder -->
-                    <!-- starting of div class right_holder -->
-                    <div id="right_holders">
-                        <img onClick="slide(+1)" id="right" src="../images/arrow_right.png" />
-                    </div>
-                </div>
-
-                <!-- ending of div class right_holder -->
-                <!-- starting of javascript for sliding image-->
-                <script type="text/javascript">
-                    var imageCount = 0;
-                    var total = 3;
-
-                    function slide(x) {
-                        var image = document.getElementsByClassName('image')[2];
-                        imageCount = imageCount + x;
-                        if (imageCount > total) {
-                            imageCount = 0;
-                        }
-                        if (imageCount < 0) {
-                            imageCount = total;
-                        }
-                        image.src = "../images/imagelinx" + imageCount + ".png";
-                    }
-                </script>
-            </div>
-        </div>
+                if (this.count <= 0) {
+                  $('.left-arrow').eq(num).css('display', 'none');
+                } else {
+                  $('.left-arrow').eq(num).css('display', 'block');
+                }
 
 
+                image.src = "../images/" + this.img + this.count + ".png";
+              }
+            }
+
+            windowSlider = new Slider(10, 'image', 0);
+            linuxSlider = new Slider(3, 'imagelinx', 1);
+            osxSlider = new Slider(5, 'imageosx', 2);
+        </script>
 
 
 
@@ -333,7 +315,6 @@
             };
 
             $("#linux").on("click", linuxEntry);
-            //                $("#osx").on("click", entry("#osx-div"));
         </script>
 
 </body>
