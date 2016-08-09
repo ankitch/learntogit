@@ -51,6 +51,7 @@
 
     <div class="row">
       <div class="col s12 m6">
+        <!-- create repositories -->
         <div class="card">
           <div class="card-content grey-text text-darken-2">
             <span class="card-title cheat-title red-text text-darken-2">Create repositories</span>
@@ -64,39 +65,105 @@
               <br> clone a existing remote repository to local machine
             </p>
           </div>
-        </div>
-      </div>
-    </div>
+        </div><!-- ./card -->
 
-    <div class="row">
-      <div class="col s12 m6">
+        <!-- Making changes -->
         <div class="card">
           <div class="card-content grey-text text-darken-2">
             <span class="card-title cheat-title red-text text-darken-2">Making changes</span>
+            <div class="row">
+              <div class="col m5 s5">
+                <p>
+                  <code class="cheat">git add [filename]</code>
+                  <br> add a file to staging area
+                </p>
+                <br>
+                <p>
+                  <code class="cheat">git add --all</code>
+                  <br> add all files to staging area
+                </p>
+              </div>
+              <div class="col m7 s7">
+                <p>
+                  <code class="cheat">git commit -m "[message]"</code>
+                  <br> record changes in version history
+                </p>
+                <br>
+                <p>
+                  <code class="cheat">git commit -am "[message]"</code>
+                  <br> add all and commit at once
+                </p>
+              </div>
+            </div><!-- ./row-->
+          </div>
+        </div><!-- ./card -->
+      </div><!-- ./col -->
+
+      <div class="col s12 m6">
+        <!-- Working with branches -->
+        <div class="card">
+          <div class="card-content grey-text text-darken-2">
+            <span class="card-title cheat-title red-text text-darken-2">Working with branches</span>
+            <div class="row">
+              <div class="col m6 s6">
+                <p>
+                  <code class="cheat">git branch</code>
+                  <br> list all local branches
+                </p>
+                <br>
+                <p>
+                  <code class="cheat">git branch [name]</code>
+                  <br> create new branch locally
+                </p>
+              </div>
+              <div class="col m6 s6">
+                <p>
+                  <code class="cheat">git checkout [name]</code>
+                  <br> switch to another branch
+                </p>
+                <br>
+                <p>
+                  <code class="cheat">git merge [name]</code>
+                  <br> merge branch into current branch
+                </p>
+              </div>
+            </div><!-- ./row-->
+          </div>
+        </div><!-- ./card -->
+
+        <!-- Remote repository -->
+        <div class="card">
+          <div class="card-content grey-text text-darken-2">
+            <span class="card-title cheat-title red-text text-darken-2">Remote repository</span>
             <p>
-              <code class="cheat">git add [filename]</code>
-              <br> add a file to staging area
+              <code class="cheat">git remote add [short-form] [repo-url]</code>
+              <br> add a new remote repository as a short form
             </p>
             <br>
             <p>
-              <code class="cheat">git add --all</code>
-              <br> add all files to staging area
+              <code class="cheat">git push [remote] [branch-name]</code>
+              <br> uploads all local commits to remote repository
+            </p>
+            <br>
+            <p>
+              <code class="cheat">git pull</code>
+              <br> incorporates remote changes into local repository
             </p>
           </div>
-        </div>
-      </div>
+        </div><!-- ./card -->
 
-    </div>
-    <!-- container -->
+      </div><!-- ./col -->
 
+    </div><!-- ./row -->
+  </div><!-- ./container -->
 
-    <script>
-      // Initialize collapse button
-      $(".button-collapse").sideNav();
+  <script>
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
 
-      // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-      $('.collapsible').collapsible();
-    </script>
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    $('.collapsible').collapsible();
+  </script>
 
 </body>
 
