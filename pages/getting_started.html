@@ -91,13 +91,12 @@
       display: none;
     }
 
-    .pills h4 {
+    .pills h7 {
       display: inline-block;
       text-align: center;
-      padding: 10px 0;
+      padding: 5px 0;
       border-right: 1px solid black;
-      font-size: 10px;
-      font-style: bold;
+      cursor: pointer;
     }
 
     .pills .win {
@@ -115,6 +114,12 @@
       width: 33%;
       font-weight: bold;
     }
+
+    .pills .win:hover, .pills .mac:hover, .pills .lin:hover, .pills .active {
+      border-top: 3px solid #d32f2f;
+    }
+
+
 
     .term-text {
       background: #eff0f1;
@@ -165,9 +170,9 @@
 
     <h3 class="main-header">Getting Started</h3>
     <div class="pills">
-      <h4 class="win" id="wind">Windows</h4>
-      <h4 class="lin" id="linux">Linux</h4>
-      <h4 class="mac" id="osx">OSX</h4>
+      <h7 class="win" id="wind">Windows</h7>
+      <h7 class="lin" id="linux">Linux</h7>
+      <h7 class="mac" id="osx">OSX</h7>
     </div>
 
     <!-- windows section -->
@@ -221,12 +226,7 @@
     </div>
 
 
-  </div>
-
-
-  <div class="container">
-
-  </div>
+  </div><!-- ./container -->
 
   <!-- script for slider -->
   <script type="text/javascript">
@@ -284,6 +284,10 @@
         "display": "none"
       });
       $("#windows-div").addClass('animated zoomInUp');
+
+      $("#wind").addClass("active");
+      $("#osx").removeClass("active");
+      $("#linux").removeClass("active");
     };
 
     $("#wind").on("click", windowEntry);
@@ -299,6 +303,10 @@
         "display": "none"
       });
       $("#osx-div").addClass('animated zoomInUp');
+
+      $("#wind").removeClass("active");
+      $("#osx").addClass("active");
+      $("#linux").removeClass("active");
     };
 
     $("#osx").on("click", osxEntry);
@@ -314,6 +322,10 @@
         "display": "none"
       });
       $("#linux-div").addClass('animated zoomInUp');
+
+      $("#wind").removeClass("active");
+      $("#osx").removeClass("active");
+      $("#linux").addClass("active");
     };
 
     $("#linux").on("click", linuxEntry);
