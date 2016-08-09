@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,6 +11,51 @@
     <script src="../js/materialize.min.js"></script>
 
     <style>
+    /*css of div container*/
+    #container {
+        height: 600px;
+        width: 1000px;
+        margin: 20px auto;
+        position: relative;
+    }
+    /*css of id image used in slider*/
+    #image {
+        height: 600px;
+        width: 1000px;
+        position: absolute;
+    }
+    /*css of left icon used in slider for positioning*/
+    #left_holder {
+        height:  450px;
+        width: : 100px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    /*css of right icon used in slider for positioning*/
+    #right_holder {
+        height:  450px;
+        width: : 100px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    /*css of left icon*/
+    #left {
+        height: 50px;
+        width:50px;
+        position: absolute;
+        top: 55%;
+        left:0px;
+    }
+    /*css of right icon*/
+    #right {
+        height: 50px;
+        width:50px;
+        position: absolute;
+        top: 55%;
+        right:0px;
+    }
 
     </style>
 
@@ -34,32 +80,94 @@
             <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
             <div class="collapsible-body">
               <ul>
-                <li><a href="learn/init.html">Initializing the repository</a></li>
-                <li><a href="learn/add.html">Adding files</a></li>
-                <li><a href="learn/status.html">Checking the status</a></li>
-                <li><a href="learn/commit.html">Committing changes</a></li>
-                <li><a href="learn/branch.html">Branching</a></li>
-                <li><a href="learn/remote.html">Adding a Remote Repository</a></li>
-                <li><a href="learn/push_pull.html">Pushing &amp; pulling </a></li>
+                <li><a href="init.html">Initializing the repository</a></li>
+                <li><a href="add.html">Adding files</a></li>
+                <li><a href="status.html">Checking the status</a></li>
+                <li><a href="commit.html">Committing changes</a></li>
+                <li><a href="branch.html">Branching</a></li>
+                <li><a href="remote.html">Adding a Remote Repository</a></li>
+                <li><a href="remote.html">Pushing &amp; pulling </a></li>
               </ul>
             </div>
           </li>
         </ul>
       </li>
-      <li><a href="cheatsheet.html">CheatSheet</a></li>
-      <li><a href="quiz/quiz.html">Quiz</a></li>
-      <li><a href="terminology.html">Terminologies</a></li>
     </ul>
 
     <div class="container">
       <h3>Getting Started</h3>
         <h4>Windows</h4>
           <h2>How to download Git in Windows</h2>
-            <p class ="instruct-text">Open your browser and got to this link https://git-scm.com/downloads. The website will come as shown in this figure. Then click on the windows then the git setup will automatically start to download.</p>
-            <img src="../images/starting.png" height="300px" width="500px">
+            <p class ="instruct-text">Open your browser and got to this link. <a href ="https://git-scm.com/downloads" target ="_ ">https://git-scm.com/downloads</a> The website will come as shown in this figure. Then click on the windows then the git setup will automatically start to download.</p>
+            <div id="container">
+          					<img src="../images/image0.png" id="image"/>
+          <!-- starting of div class left_holder -->
+          					<div id="left_holder" >
+          								<img onClick="slide(-1)" id= "left" src="../images/arrow_left.png"/>
+          								</div>
+          <!-- ending of div class left_holder -->
+          <!-- starting of div class right_holder -->
+          						<div id="right_holder">
+          								<img onClick="slide(+1)" id ="right" src="../images/arrow_right.png"/>
+          								</div>
+          <!-- ending of div class right_holder -->
+          <!-- starting of javascript for sliding image-->
+          					<script type="text/javascript">
+          					var imageCount = 0;
+          					var total = 10;
+
+          					function slide(x) {
+          						var image = document.getElementById('image');
+          						imageCount = imageCount + x;
+          						if(imageCount > total){imageCount = 0;}
+          						if(imageCount < 0){imageCount = total;}
+          						image.src = "../images/image"+ imageCount +".png";
+          							}
+
+          					</script>
+          <!-- ending of javascript -->
+          				</div>
+
+                  <!-- OSX-->
+                  <div class="container">
+                  <h4>OSX</h4>
+                    <h2>How to download Git in OSX</h2>
+                      <p class ="instruct-text">Open your browser and got to this link. <a href ="https://git-scm.com/downloads" target ="_ ">https://git-scm.com/downloads</a> The website will come as shown in this figure. Then click on the OSX then the git setup will automatically start to download.</p>
+                      <div id="container">
+                    					<img src="../images/imageosx0.jpg" id="imageosx"/>
+                    <!-- starting of div class left_holder -->
+                    					<div id="left_holder" >
+                    								<img onClick="slide(-1)" id= "left" src="../images/arrow_left.png"/>
+                    								</div>
+                    <!-- ending of div class left_holder -->
+                    <!-- starting of div class right_holder -->
+                    						<div id="right_holder">
+                    								<img onClick="slide(+1)" id ="right" src="../images/arrow_right.png"/>
+                    								</div>
+                    <!-- ending of div class right_holder -->
+                    <!-- starting of javascript for sliding image-->
+                    					<script type="text/javascript">
+                    					var imageCount = 0;
+                    					var total = 5;
+
+                    					function slide(x) {
+                    						var image = document.getElementById('imageosx');
+                    						imageCount = imageCount + x;
+                    						if(imageCount > total){imageCount = 0;}
+                    						if(imageCount < 0){imageCount = total;}
+                    						image.src = "../images/imageosx"+ imageCount +".jpg";
+                    							}
+
+                    					</script>
+                    <!-- ending of javascript -->
+                    				</div>
+
+            <!-- <img src="../images/starting.png" height="600px" width="800px">
               <br>
-            <p class="instruct-text">After downloading the setup file, double click on the file and the modal box will appear like shown.
-              <img src="../images/capture.png">
+              <p class="instruct-text">After downloading the setup file, double click on the file and the modal box will appear like shown.
+              <img src="../images/capture.png" alt="Installing Guide" height="400px" width="400px">
+              <p class="instruct-text"> When the modal box appears click on next button till the install button appear on the buttom of modal box.
+               -->
 
         <h4>Linux</h4>
         <h4>OSX</h4>
@@ -83,3 +191,6 @@
   </body>
 
 </html>
+
+</html>
+>>>>>>> 66319b9117efd6bea6242fbaf5a3438c19b52592
