@@ -1,0 +1,31 @@
+.container{
+	margin: 50px auto 60px;
+}
+
+.reference ul li{
+	padding: 5px 0;
+	list-style: disc;
+	margin-left: 30px;
+	font-size: 16px;
+}
+
+
+.Bibliography ul li{
+	padding: 5px 0;
+	list-style: disc;
+	margin-left: 30px;
+	font-size: 16px;
+}
+
+.Bibliography{
+	margin-top: 50px
+}
+
+.reference a{
+	text-decoration: underline;
+}
+
+
+.Bibliography a{
+	text-decoration: underline;
+}
