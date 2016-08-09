@@ -1,34 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
-
 .term {
-	font-family: 'Roboto Mono', fixed,swiss,sans-serif;
-	font-size: 14px;
-	color: #f2f2f2;
-	background: none;
+  font-family: 'Roboto Mono', fixed, swiss, sans-serif;
+  font-size: 14px;
+  color: #f2f2f2;
+  background: none;
 }
-
 .termReverse {
-	color: #111111;
-	background: #33d011;
+  color: #111111;
+  background: #33d011;
 }
-
 td, th {
-	padding: 2px 5px;
+  padding: 2px 5px;
 }
-
 .terminal-window {
-	visibility: hidden;
-	border-radius: 8px 8px 0 0;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.78);
+  visibility: hidden;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.78);
 }
-
 .terminal-window header {
   background: #bdc5cc;
   height: 30px;
   border-radius: 8px 8px 0 0;
   padding-left: 10px;
 }
-
 .terminal-window header .button {
   width: 12px;
   height: 12px;
@@ -36,16 +30,12 @@ td, th {
   display: inline-block;
   border-radius: 8px;
 }
-
 .terminal-window header .button.green {
   background: #3BB662;
 }
-
 .terminal-window header .button.yellow {
   background: #E5C30F;
 }
-
-
 .terminal-window header .button.red {
   background: #E75448;
 }

@@ -2,69 +2,70 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Learn to Git</title>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/materialize.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="../js/materialize.min.js"></script>
+  <meta charset="utf-8">
+  <title>Learn to Git</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/materialize.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script src="../js/materialize.min.js"></script>
 </head>
 
 <body>
-    <!-- navbar -->
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
-
-    <!-- sidebar ----->
-    <ul id="slide-out" class="side-nav">
-        <li><a href="intro.html">Introduction</a></li>
-        <li><a href="getting_started.html">Getting started</a></li>
-        <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-                <li>
-                    <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="learn/init.html">Initializing the repository</a></li>
-                            <li><a href="learn/add.html">Adding files</a></li>
-                            <li><a href="learn/status.html">Checking the status</a></li>
-                            <li><a href="learn/commit.html">Committing changes</a></li>
-                            <li><a href="learn/branch.html">Branching</a></li>
-                            <li><a href="learn/remote.html">Adding a Remote Repository</a></li>
-                            <li><a href="learn/push_pull.html">Pushing &amp; pulling </a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <li><a href="cheatsheet.html">CheatSheet</a></li>
-            <li><a href="quiz.html">Quiz</a></li>
-            <li><a href="terminology.html">Terminologies</a></li>
-        </li>
-    </ul>
-
-    <!-- main body -->
-    <div class="container">
-        <h3>Introduction</h3>
-        <h5>Git</h5>
-        <p>In the world of version control system, Git is known to be the most widely used version control system. Git is an open-source project originally developed in 2005 by linus Trovalds to help in the working of Linux kernel.</p>
-
-        <h5>Version Control System</h5>
-        <p>Since git is a version control system, let's talk briefly on version control system (VCS). VCS is a system that keeps record of every changes of a file or a set of files over time so you can always recall them later. If you wreck your project while working on it, by any chance (which you will likely to), you can always restore to previous versions and continue work from there</p>
-
-        <h5>Distributed VCS</h5>
-        <p>Even among the version control system, Git is of distributed architecture. In this architecture, there is no single centralized repository. A cloned project in each contributor's local machince can serve as a repository.</p>
+  <!-- navbar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
     </div>
+  </nav>
 
-    <script>
-        // Initialize collapse button
-        $(".button-collapse").sideNav();
-        // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-        $('.collapsible').collapsible();
-    </script>
+  <!-- sidebar ----->
+  <ul id="slide-out" class="side-nav">
+    <li><a href="intro.html">Introduction</a></li>
+    <li><a href="getting_started.html">Getting started</a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="learn/init.html">Initializing the repository</a></li>
+              <li><a href="learn/add.html">Adding files</a></li>
+              <li><a href="learn/status.html">Checking the status</a></li>
+              <li><a href="learn/commit.html">Committing changes</a></li>
+              <li><a href="learn/branch.html">Branching</a></li>
+              <li><a href="learn/remote.html">Adding a Remote Repository</a></li>
+              <li><a href="learn/push_pull.html">Pushing &amp; pulling </a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <li><a href="cheatsheet.html">CheatSheet</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="terminology.html">Terminologies</a></li>
+    </li>
+  </ul>
+
+  <!-- main body -->
+  <div class="container">
+    <h3>Introduction</h3>
+    <h5>Git</h5>
+    <p>In the world of version control system, Git is known to be the most widely used version control system. Git is an open-source project originally developed in 2005 by linus Trovalds to help in the working of Linux kernel.</p>
+
+    <h5>Version Control System</h5>
+    <p>Since git is a version control system, let's talk briefly on version control system (VCS). VCS is a system that keeps record of every changes of a file or a set of files over time so you can always recall them later. If you wreck your project while
+      working on it, by any chance (which you will likely to), you can always restore to previous versions and continue work from there</p>
+
+    <h5>Distributed VCS</h5>
+    <p>Even among the version control system, Git is of distributed architecture. In this architecture, there is no single centralized repository. A cloned project in each contributor's local machince can serve as a repository.</p>
+  </div>
+
+  <script>
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    $('.collapsible').collapsible();
+  </script>
 
 </body>
 

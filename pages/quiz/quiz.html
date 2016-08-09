@@ -2,90 +2,89 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Git Quiz</title>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/materialize.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="css/master.css" media="screen" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script src="../../js/materialize.min.js"></script>
-    <script src="js/slickQuiz-config.js"></script>
-    <script src="js/slickQuiz.js"></script>
-    <script src="js/master.js"></script>
+  <meta charset="utf-8">
+  <title>Git Quiz</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/materialize.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="css/master.css" media="screen" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script src="../../js/materialize.min.js"></script>
+  <script src="js/slickQuiz-config.js"></script>
+  <script src="js/slickQuiz.js"></script>
+  <script src="js/master.js"></script>
 </head>
 
 <body id="slickQuiz">
 
-    <!-- navbar -->
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-            <a href="#" class="brand-logo center">Learn To Git</a>
-        </div>
-    </nav>
+  <!-- navbar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+      <a href="#" class="brand-logo center">Learn To Git</a>
+    </div>
+  </nav>
 
-    <!-- sidebar -->
-    <ul id="slide-out" class="side-nav">
-        <li><a href="../intro.html">Introduction</a></li>
-        <li><a href="../getting_started.html">Getting started</a></li>
-        <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-                <li>
-                    <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="../learn/init.html">Initializing the repository</a></li>
-                            <li><a href="../learn/add.html">Adding files</a></li>
-                            <li><a href="../learn/status.html">Checking the status</a></li>
-                            <li><a href="../learn/commit.html">Committing changes</a></li>
-                            <li><a href="../learn/branch.html">Branching</a></li>
-                            <li><a href="../learn/remote.html">Adding a Remote Repository</a></li>
-                            <li><a href="../learn/push_pull.html">Pushing &amp; pulling </a></li>
-                        </ul>
-                    </div>
-                </li>
+  <!-- sidebar -->
+  <ul id="slide-out" class="side-nav">
+    <li><a href="../intro.html">Introduction</a></li>
+    <li><a href="../getting_started.html">Getting started</a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="../learn/init.html">Initializing the repository</a></li>
+              <li><a href="../learn/add.html">Adding files</a></li>
+              <li><a href="../learn/status.html">Checking the status</a></li>
+              <li><a href="../learn/commit.html">Committing changes</a></li>
+              <li><a href="../learn/branch.html">Branching</a></li>
+              <li><a href="../learn/remote.html">Adding a Remote Repository</a></li>
+              <li><a href="../learn/push_pull.html">Pushing &amp; pulling </a></li>
             </ul>
+          </div>
         </li>
-        <li><a href="../cheatsheet.html">CheatSheet</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="../terminology.html">Terminologies</a></li>
-    </ul>
+      </ul>
+    </li>
+    <li><a href="../cheatsheet.html">CheatSheet</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="../terminology.html">Terminologies</a></li>
+  </ul>
 
 
 
-    <section class="quiz">
-        <h1 class="quizName"><!-- where the quiz name goes --></h1>
+  <section class="quiz">
+    <h1 class="quizName"><!-- where the quiz name goes --></h1>
 
-        <div class="quizArea">
-            <div class="quizHeader">
-                <!-- where the quiz main copy goes -->
+    <div class="quizArea">
+      <div class="quizHeader">
+        <!-- where the quiz main copy goes -->
 
-                <a class="button startQuiz" href="#">Get Started!</a>
-            </div>
+        <a class="button startQuiz" href="#">Get Started!</a>
+      </div>
 
-            <!-- where the quiz gets built -->
-        </div>
+      <!-- where the quiz gets built -->
+    </div>
 
-        <div class="quizResults">
-            <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>
+    <div class="quizResults">
+      <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>
 
-            <h3 class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>
+      <h3 class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>
 
-        </div>
-        </div>
-    </section>
-    
-    <script>
+    </div>
+    </div>
+  </section>
+
+  <script>
     // Initialize collapse button
     $(".button-collapse").sideNav();
 
     // Initialize collapsible (uncomment the line below if you use the dropdown variation)
     $('.collapsible').collapsible();
-
-    </script>
+  </script>
 </body>
 
 </html>

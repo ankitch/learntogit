@@ -7,16 +7,14 @@ var expIndex = 0;
 
 //initialize the terminal
 function foo() {
-    term = new Terminal(
-        {
-            x: 0,
-            y: 0,
-            cols: 60,
-            rows: 18,
-            termDiv: 'termDiv1',
-            handler: termHandler
-        }
-    );
+    term = new Terminal({
+        x: 0,
+        y: 0,
+        cols: 60,
+        rows: 18,
+        termDiv: 'termDiv1',
+        handler: termHandler
+    });
     term.open();
     term.focus();
 
@@ -24,10 +22,10 @@ function foo() {
         this.newLine();
         var line = this.lineBuffer;
         var splitted = line.split(" ");
-        var c = 0;  //counter to point to a word of command at a time
-        if (splitted[c] == 'git'){
+        var c = 0; //counter to point to a word of command at a time
+        if (splitted[c] == 'git') {
             c++;
-            switch (splitted[c++]){
+            switch (splitted[c++]) {
                 case 'init':
                     this.write(outInit());
                     break;
@@ -38,7 +36,7 @@ function foo() {
                     this.write(addFile(splitted[c]));
                     break;
                 case 'commit':
-                    if(splitted[c++] == '-m') {
+                    if (splitted[c++] == '-m') {
                         var messageArray = splitted.slice(c);
                         var messageString = messageArray.join(" ");
                         this.write(commit(messageString));
@@ -72,7 +70,7 @@ function foo() {
                     this.write("New changes have been successfully pulled");
                     break;
                 default:
-                    this.write('git: \'' + splitted[c-1] + '\' is not a git command.')
+                    this.write('git: \'' + splitted[c - 1] + '\' is not a git command.')
 
             }
         } else {
@@ -86,21 +84,21 @@ function foo() {
         if (expected.indexOf(line) == expIndex) {
             expIndex++;
         }
-        if(expIndex == expected.length && expected.indexOf(line) > -1) {
+        if (expIndex == expected.length && expected.indexOf(line) > -1) {
             console.log('success');
-            var openSuccess = function() {$('#success-modal').openModal();};
+            var openSuccess = function() {
+                $('#success-modal').openModal();
+            };
             setTimeout(openSuccess, 2000);
         }
 
     }
 
     //adjust termwindow according to size of terminal div
-    $('#termWindow').css(
-        {
-            'width': term.getDimensions().width + 'px',
-            'visibility': 'visible'
-        }
-    );
+    $('#termWindow').css({
+        'width': term.getDimensions().width + 'px',
+        'visibility': 'visible'
+    });
 
 
 }
@@ -118,7 +116,7 @@ function outStatus() {
 
     if (unstaged.length > 0) {
         var filesString = "\t\t\t\t"
-        $.each(unstaged, function (key, value) {
+        $.each(unstaged, function(key, value) {
             filesString += value + '\t\t';
         });
         output.push(
@@ -131,7 +129,7 @@ function outStatus() {
     if (staged.length > 0) {
         var addedString = "";
         output.push('Changes to be commited:');
-        $.each(staged, function (key, value) {
+        $.each(staged, function(key, value) {
             addedString += '\t\t\t\tnew file: ' + value + '\n';
         })
         output.push(addedString);
