@@ -88,6 +88,10 @@
             display: none;
         }
         
+        #linux-div {
+            display: none;
+        }
+        
         .pills h4 {
             display: inline-block;
             text-align: center;
@@ -100,14 +104,17 @@
         .pills .win {
             width: 33%;
             border-left: 1px solid black;
+            font-weight: bold;
         }
         
         .pills .lin {
             width: 33%;
+            font-weight: bold;
         }
         
         .pills .mac {
             width: 33%;
+            font-weight: bold;
         }
     </style>
 
@@ -118,7 +125,7 @@
     <nav>
         <div class="nav-wrapper">
             <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-            <a href="#" class="brand-logo center">Learn To Git</a>
+            <a href="../index.html" class="brand-logo center">Learn To Git</a>
         </div>
     </nav>
 
@@ -132,18 +139,20 @@
                     <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a href="init.html">Initializing the repository</a></li>
-                            <li><a href="add.html">Adding files</a></li>
-                            <li><a href="status.html">Checking the status</a></li>
-                            <li><a href="commit.html">Committing changes</a></li>
-                            <li><a href="branch.html">Branching</a></li>
-                            <li><a href="remote.html">Adding a Remote Repository</a></li>
-                            <li><a href="remote.html">Pushing &amp; pulling </a></li>
+                            <li><a href="learn/init.html">Initializing the repository</a></li>
+                            <li><a href="learn/add.html">Adding files</a></li>
+                            <li><a href="learn/status.html">Checking the status</a></li>
+                            <li><a href="learn/commit.html">Committing changes</a></li>
+                            <li><a href="learn/branch.html">Branching</a></li>
+                            <li><a href="learn/remote.html">Adding a Remote Repository</a></li>
+                            <li><a href="learn/push_pull.html">Pushing &amp; pulling </a></li>
                         </ul>
                     </div>
                 </li>
             </ul>
         </li>
+        <li><a href="cheatsheet.html">CheatSheet</a></li>
+        <li><a href="quiz/quiz.html">Quiz</a></li>
     </ul>
 
     <div class="container">
@@ -195,7 +204,7 @@
         <!-- OSX-->
         <div class="container">
             <div id="osx-div">
-                <h3>How to download Git in OSX</h3>
+                <h6>How to download Git in OSX</h6>
                 <p class="instruct-text">Open your browser and got to this link. <a href="https://git-scm.com/downloads" target="_ ">https://git-scm.com/downloads</a> The website will come as shown in this figure. Then click on the OSX then the git setup will automatically start to download.</p>
                 <div id="container">
                     <img src="../images/imageosx0.jpg" class="image" />
@@ -209,6 +218,7 @@
                         <img onClick="slide(+1)" id="right" src="../images/arrow_right.png" />
                     </div>
                 </div>
+
                 <!-- ending of div class right_holder -->
                 <!-- starting of javascript for sliding image-->
                 <script type="text/javascript">
@@ -227,10 +237,46 @@
                         image.src = "../images/imageosx" + imageCount + ".jpg";
                     }
                 </script>
-                <!-- ending of javascript -->
             </div>
-
         </div>
+        <div class="container">
+            <div id="linux-div">
+                <h6>How to download Git in Linux</h6>
+                <p class="instruct-text">Open your browser and got to this link. <a href="https://git-scm.com/downloads" target="_ ">https://git-scm.com/downloads</a> The website will come as shown in this figure. Then click on the OSX then the git setup will automatically start to download.</p>
+                <div id="container">
+                    <img src="../images/imagelinx0.png" class="image" />
+                    <!-- starting of div class left_holder -->
+                    <div id="left_holders">
+                        <img onClick="slide(-1)" id="left" src="../images/arrow_left.png" />
+                    </div>
+                    <!-- ending of div class left_holder -->
+                    <!-- starting of div class right_holder -->
+                    <div id="right_holders">
+                        <img onClick="slide(+1)" id="right" src="../images/arrow_right.png" />
+                    </div>
+                </div>
+
+                <!-- ending of div class right_holder -->
+                <!-- starting of javascript for sliding image-->
+                <script type="text/javascript">
+                    var imageCount = 0;
+                    var total = 3;
+
+                    function slide(x) {
+                        var image = document.getElementsByClassName('image')[2];
+                        imageCount = imageCount + x;
+                        if (imageCount > total) {
+                            imageCount = 0;
+                        }
+                        if (imageCount < 0) {
+                            imageCount = total;
+                        }
+                        image.src = "../images/imagelinx" + imageCount + ".png";
+                    }
+                </script>
+            </div>
+        </div>
+
 
 
 
@@ -280,7 +326,7 @@
                 $("#osx-div").css({
                     "display": "none"
                 });
-                $("#linux-div").css({
+                $("#windows-div").css({
                     "display": "none"
                 });
                 $("#linux-div").addClass('animated zoomInUp');

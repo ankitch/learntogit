@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Learn to Git</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,109 +17,110 @@
 
     </style>
 
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- navbar -->
     <nav>
-      <div class="nav-wrapper">
-        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-        <a href="#" class="brand-logo center">Learn To Git</a>
-      </div>
+        <div class="nav-wrapper">
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+            <a href="../../index.html" class="brand-logo center">Learn To Git</a>
+        </div>
     </nav>
 
     <!-- sidebar ----->
     <!-- sidebar ----->
     <ul id="slide-out" class="side-nav">
-      <li><a href="../../intro.html">Introduction</a></li>
-      <li><a href="../getting_started.html">Getting started</a></li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="init.html">Initializing the repository</a></li>
-                <li><a href="add.html">Adding files</a></li>
-                <li><a href="status.html">Checking the status</a></li>
-                <li><a href="commit.html">Committing changes</a></li>
-                <li><a href="branch.html">Branching</a></li>
-                <li><a href="remote.html">Adding a Remote Repository</a></li>
-                <li><a href="push_pull.html">Pushing &amp; pulling </a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <li><a href="../cheatsheet.html">CheatSheet</a></li>
-        <li><a href="../quiz/quiz.html">Quiz</a></li>
-        <li><a href="../terminology.html">Terminologies</a></li>
-      </li>
+        <li><a href="../../intro.html">Introduction</a></li>
+        <li><a href="../getting_started.html">Getting started</a></li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="init.html">Initializing the repository</a></li>
+                            <li><a href="add.html">Adding files</a></li>
+                            <li><a href="status.html">Checking the status</a></li>
+                            <li><a href="commit.html">Committing changes</a></li>
+                            <li><a href="branch.html">Branching</a></li>
+                            <li><a href="remote.html">Adding a Remote Repository</a></li>
+                            <li><a href="push_pull.html">Pushing &amp; pulling </a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <li><a href="../cheatsheet.html">CheatSheet</a></li>
+            <li><a href="../quiz/quiz.html">Quiz</a></li>
+        </li>
     </ul>
 
     <div class="container">
-      <!-- grid -->
-      <div class="row">
-        <!-- instruction -->
-        <div class="col m6">
-          <h2>Learn</h2>
-          <h4>Creating &amp; switching branch</h4>
-          <p class="instruct-text">
-             When you have new features to add to program but do not want to break your main program, git gives you a feature called branching. Branch is a separate copy of main program which your commits to it does not affect the <strong>master branch</strong> (your main program).
-          </p>
-          <p class="instruct-text">
-            To create a new branch, enter the following command:<br>
-            <code>git branch insect</code>
-          </p>
-          <p class="instruct-text">
-            To switch to the branch, enter the following command:<br>
-            <code>git checkout insect</code>
-          </p>
+        <!-- grid -->
+        <div class="row">
+            <!-- instruction -->
+            <div class="col m6">
+                <h2>Learn</h2>
+                <h4>Creating &amp; switching branch</h4>
+                <p class="instruct-text">
+                    When you have new features to add to program but do not want to break your main program, git gives you a feature called branching. Branch is a separate copy of main program which your commits to it does not affect the <strong>master branch</strong> (your main program).
+                </p>
+                <p class="instruct-text">
+                    To create a new branch, enter the following command:
+                    <br>
+                    <code>git branch insect</code>
+                </p>
+                <p class="instruct-text">
+                    To switch to the branch, enter the following command:
+                    <br>
+                    <code>git checkout insect</code>
+                </p>
 
+            </div>
+            <!-- terminal -->
+            <div class="col m6">
+                <h5>Try It!</h5>
+                <div class="terminal-window" id="termWindow">
+                    <header id="termHeader">
+                        <div class="button green"></div>
+                        <div class="button yellow"></div>
+                        <div class="button red"></div>
+                    </header>
+                    <div id="termDiv1" style="position:relative; z-index:1;"></div>
+                </div>
+            </div>
         </div>
-        <!-- terminal -->
-        <div class="col m6">
-          <h5>Try It!</h5>
-          <div class="terminal-window" id="termWindow">
-    				<header id="termHeader">
-    				   <div class="button green"></div>
-    				   <div class="button yellow"></div>
-    				   <div class="button red"></div>
-     		   	</header>
-            <div id="termDiv1" style="position:relative; z-index:1;"></div>
-          </div>
-        </div>
-      </div>
 
     </div>
 
     <!-- modal for showing success -->
     <div id="success-modal" class="modal">
-      <div class="modal-content success-modal">
-        <h3>SUCCESS!</h3>
-        <p>Congratulations! You have completed all learn tasks. Click below to know about more commands</p>
-        <a class="waves-effect waves-light btn next-btn" href="../cheatsheet.html">Continue to next step</a>
-      </div>
+        <div class="modal-content success-modal">
+            <h3>SUCCESS!</h3>
+            <p>Congratulations! You have completed all learn tasks. Click below to know about more commands</p>
+            <a class="waves-effect waves-light btn next-btn" href="../cheatsheet.html">Continue to next step</a>
+        </div>
     </div>
 
 
-   <script>
-     // Initialize collapse button
-    $(".button-collapse").sideNav();
+    <script>
+        // Initialize collapse button
+        $(".button-collapse").sideNav();
 
-    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-    $('.collapsible').collapsible();
+        // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+        $('.collapsible').collapsible();
 
-    //run the terminal
-    $('document').ready(function() {
-      foo();
-    });
-   </script>
+        //run the terminal
+        $('document').ready(function () {
+            foo();
+        });
+    </script>
 
-   <script>
-     //initialize an array of expected commands
-     expected = ['git branch insect', 'git checkout insect']
-   </script>
+    <script>
+        //initialize an array of expected commands
+        expected = ['git branch insect', 'git checkout insect']
+    </script>
 
-  </body>
+</body>
 
 </html>
