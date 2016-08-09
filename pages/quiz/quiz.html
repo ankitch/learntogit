@@ -1,286 +1,85 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Learn to Git</title>
+    <title>Git Quiz</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../css/materialize.min.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/master.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script src="../../js/materialize.min.js"></script>
-  </head>
+    <script src="js/slickQuiz-config.js"></script>
+    <script src="js/slickQuiz.js"></script>
+    <script src="js/master.js"></script>
+</head>
 
-  <body>
+<body id="slickQuiz">
 
     <!-- navbar -->
     <nav>
-      <div class="nav-wrapper">
-        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-        <a href="#" class="brand-logo center">Learn To Git</a>
-      </div>
+        <div class="nav-wrapper">
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo center">Learn To Git</a>
+        </div>
     </nav>
 
-    <!-- sidebar ----->
+    <!-- sidebar -->
     <ul id="slide-out" class="side-nav">
-      <li><a href="../intro.html">Introduction</a></li>
-      <li><a href="../getting_started.html">Getting started</a></li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="../learn/init.html">Initializing the repository</a></li>
-                <li><a href="../learn/add.html">Adding files</a></li>
-                <li><a href="../learn/status.html">Checking the status</a></li>
-                <li><a href="../learn/commit.html">Committing changes</a></li>
-                <li><a href="../learn/branch.html">Branching</a></li>
-                <li><a href="../learn/remote.html">Adding a Remote Repository</a></li>
-                <li><a href="../learn/push_pull.html">Pushing &amp; pulling </a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li><a href="../cheatsheet.html">CheatSheet</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="../terminology.html">Terminologies</a></li>
+        <li><a href="../intro.html">Introduction</a></li>
+        <li><a href="../getting_started.html">Getting started</a></li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="../learn/init.html">Initializing the repository</a></li>
+                            <li><a href="../learn/add.html">Adding files</a></li>
+                            <li><a href="../learn/status.html">Checking the status</a></li>
+                            <li><a href="../learn/commit.html">Committing changes</a></li>
+                            <li><a href="../learn/branch.html">Branching</a></li>
+                            <li><a href="../learn/remote.html">Adding a Remote Repository</a></li>
+                            <li><a href="../learn/push_pull.html">Pushing &amp; pulling </a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li><a href="../cheatsheet.html">CheatSheet</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="../terminology.html">Terminologies</a></li>
     </ul>
 
-  <div class="container">
-  <h2 class="quizHeader">Take a Quiz!</h2>
 
-	<table style="width:1000px">
-	<tr>
-	  <td>
-	  	<div>
-	  		<p class="question">1. What is git?</p>
 
-	    	<ul>
-          <input class="answer" type="radio" name="q1" value="0" id="1">
-            <label for="1">A scripting language.</label>
-          <br>
-	    	<input class="answer" type="radio" name="q1" value="1" id ="2">
-	        <label for="2" id="correctString1">A distributed version control system.</label>
-	    	<br>
-	        <input class="answer" type="radio" name="q1" value="0" id ="3">
-	        <label for = "3">A database management system</label>
-	        <br>
-	        <input class="answer" type="radio" name="q1" value="0" id="4">
-	        <label for ="4">A program called Generated Internet Transmissions.</label>
-    		</ul>
-	  	</div>
-	  </td>
-	  <td>
-	  	<div>
-	  		<p class="question">2. What would this Git command do?</p>
-          <strong>$ git init</strong>
-	    	<ul>
-	        <input class="answer" type="radio" name="q2" value="0" id="5">
-	        <label for="5">Create a variable called 'init'.</label>
-	        <br>
-	        <input class="answer" type="radio" name="q2" value="1" id="6">
-	        <label for="6" id="correctString2">Create a repository.</label>
-	        <br>
-	        <input class="answer" type="radio" name="q2" value="0" id="7">
-	        <label for="7">Open a file called 'init'.</label>
-	        <br>
-	        <input class="answer" type="radio" name="q2" value="0" id="8">
-	        <label for="8">Create a text file called 'init’.</label>
-	    	</ul>
-	  	</div>
-	  </td>
-	</tr>
-	<tr>
-	  <td>
-	  	<div>
-	  		<p class="question">3. What is a repository?</p>
+    <section class="quiz">
+        <h1 class="quizName"><!-- where the quiz name goes --></h1>
 
-	    	<ul>
-	        <input class="answer" type="radio" name="q3" value="0" id="9">
-	        <label for"9">A web site.</label>
-	        <br>
-	        <input class="answer" type="radio" name="q3" value="0" id="10">
-	        <label for="10">An xml (eXtensible Markup Language) file.</label>
-	        <br>
-	        <input class="answer" type="radio" name="q3" value="0" id="11">
-	        <label for="11"> A database.</label>
-          <br>
-          <input class="answer" type="radio" name="q3" value="1" id="12">
-	        <label for="12" id="correctString3">A central place where data is stored and maintained.</label>
-	        <br>
-	    	</ul>
-		</div>
-	  </td>
-	  <td>
-	  	<div>
-	  		<p class="question">4. What's the command to download your repo from GitHub to your computer?</p>
+        <div class="quizArea">
+            <div class="quizHeader">
+                <!-- where the quiz main copy goes -->
 
-	    	<ul>
-	        <input class="answer" type="radio" name="q4" value="0" id="13">
-	        <label for="13">git fork</label>
-	        <br>
-	        <input class="answer" type="radio" name="q4" value="0" id="14">
-	        <label for="14">git push</label>
-	        <br>
-	        <input class="answer" type="radio" name="q4" value="0" id="15">
-	        <label for="15">git commit</label>
-          <br>
-          <input class="answer" type="radio" name="q4" value="1" id="16">
-	        <label  for ="16" id="correctString4">git clone</label>
-	        <br>
-    		</ul>
-	  	</div>
-	  </td>
-	</tr>
-  <tr>
-	  <td>
-	  	<div>
-	  		<p class="question">5.What's a shortcut to staging all the changes you have?</p>
+                <a class="button startQuiz" href="#">Get Started!</a>
+            </div>
 
-	    	<ul>
-	        <input class="answer" type="radio" name="q5" value="0" id="17">
-	        <label for="17">git commit add .</label>
-	        <br>
-	        <input class="answer" type="radio" name="q5" value="1" id="18">
-	        <label id="correctString5" for ="19" >git add .</label>
-	        <br>
-	        <input class="answer" type="radio" name="q5" value="0" id="19">
-	        <label for="19">git commit add .</label>
-	        <br>
-	        <input class="answer" type="radio" name="q5" value="0" id="20">
-	        <label for="20">git push -am "Message"</label>
-	    	</ul>
-		</div>
-	  </td>
-	  <td>
-	  	<div>
-	  		<p class="question">6. How do you supply a commit message to a commit?</p>
-	    	<ul>
-	        <input class="answer" type="radio" name="q6" value="0" id="21">
-	        <label for="21">git message "I'm coding"</label>
-	        <br>
-	        <input class="answer" type="radio" name="q6" value="0" id="22">
-	        <label for="23">git add "I'm coding"</label>
-	        <br>
-          <input class="answer" type="radio" name="q6" value="1" id="23">
-	        <label for="23" id="correctString6">git commit -m "I'm coding</label>
-	        <br>
-	        <input class="answer" type="radio" name="q6" value="0" id= "24">
-	        <label for= "24">git commit "I'm coding"</label>
-    		</ul>
-	  	</div>
-	  </td>
-	</tr>
-	</table>
-<br/>
-  <div class="submitter">
-          <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
-          type="submit" value="Submit" />
-    </div>
+            <!-- where the quiz gets built -->
+        </div>
 
-<!--show only wrong answers on submit-->
-    <div class="quizAnswers" id="correctAnswer1"></div>
-	    <div class="quizAnswers" id="correctAnswer2"></div>
-    <div class="quizAnswers" id="correctAnswer3"></div>
-    <div class="quizAnswers" id="correctAnswer4"></div>
-    <div class="quizAnswers" id="correctAnswer5"></div>
-      <div class="quizAnswers" id="correctAnswer6"></div>
-<!--show score upon submit-->
-    <div>
-    	<h2 class="quizScore" id="userScore"></h2>
-    </div>
-	</div>
-</div><!--../container-->
-  <script type="text/javascript">
-  // scripts here:
+        <div class="quizResults">
+            <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>
 
-    function submitQuiz() {
-      console.log('submitted');
+            <h3 class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>
 
-    // get each answer score
-      function answerScore (qName) {
-        var radiosNo = document.getElementsByName(qName);
-
-        for (var i = 0, length = radiosNo.length; i < length; i++) {
-            if (radiosNo[i].checked) {
-        // do something with radiosNo
-            var answerValue = Number(radiosNo[i].value);
-          }
-        }
-        // change NaNs to zero
-        if (isNaN(answerValue)) {
-          answerValue = 0;
-        }
-        return answerValue;
-      }
-
-    // calc score with answerScore function
-      var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4')+ answerScore('q5')+ answerScore('q6'));
-      console.log("CalcScore: " + calcScore); // it works!
-
-    // function to return correct answer string
-      function correctAnswer (correctStringNo, qNumber) {
-        console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
-        return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
-          (document.getElementById(correctStringNo).innerHTML) + "</strong>");
-        }
-
-    // print correct answers only if wrong (calls correctAnswer function)
-      if (answerScore('q1') === 0) {
-        document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
-      }
-      if (answerScore('q2') === 0) {
-        document.getElementById('correctAnswer2').innerHTML = correctAnswer('correctString2', 2);
-      }
-      if (answerScore('q3') === 0) {
-        document.getElementById('correctAnswer3').innerHTML = correctAnswer('correctString3', 3);
-      }
-      if (answerScore('q4') === 0) {
-        document.getElementById('correctAnswer4').innerHTML = correctAnswer('correctString4', 4);
-      }
-      if (answerScore('q5') === 0) {
-        document.getElementById('correctAnswer5').innerHTML = correctAnswer('correctString5', 5);
-      }
-      if (answerScore('q6') === 0) {
-        document.getElementById('correctAnswer6').innerHTML = correctAnswer('correctString6', 6);
-      }
-
-    // calculate "possible score" integer
-      var questionCountArray = document.getElementsByClassName('question');
-
-      var questionCounter = 0;
-      for (var i = 0, length = questionCountArray.length; i < length; i++) {
-        questionCounter++;
-      }
-
-    // show score as "score/possible score"
-      var showScore = "Your Score: " + calcScore +"/" + questionCounter;
-    // if 4/4, "perfect score!"
-      if (calcScore === questionCounter) {
-        showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
-      };
-      document.getElementById('userScore').innerHTML = showScore;
-    }
-
-  $(document).ready(function() {
-
-    $('#submitButton').click(function() {
-      $(this).addClass('hide');
-    });
-
-  });
-  </script>
-
-  <script>
-    // Initialize collapse button
-   $(".button-collapse").sideNav();
-
-   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-   $('.collapsible').collapsible();
-  </script>
-
+        </div>
+        </div>
+    </section>
+    <script>
+        v
+    </script>
 </body>
 
 </html>
