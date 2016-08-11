@@ -1,3 +1,3 @@
 # learntogit
-Learn yourself the basics of git 
-ankitch.github.io/learntogit/
+Learn yourself the basics of Git 
+https://ankitch.github.io/learntogit/
