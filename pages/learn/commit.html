@@ -2,118 +2,117 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Learn to Git</title>
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/materialize.min.css">
-  <link rel="stylesheet" href="../../css/style.css">
-  <script type="text/javascript" src="../../js/jquery.min.js"></script>
-  <script src="../../js/materialize.min.js"></script>
-  <script src="../../terminal/lib/termlib_min.js"></script>
-  <script src="../../terminal/lib/termlib_parser_min.js"></script>
-  <script src="../../terminal/terminal.js"></script>
-  <link rel="stylesheet" href="../../terminal/term_styles.css">
+    <meta charset="utf-8">
+    <title>Learn to Git</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/materialize.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script src="../../js/materialize.min.js"></script>
+    <script src="../../terminal/lib/termlib_min.js"></script>
+    <script src="../../terminal/lib/termlib_parser_min.js"></script>
+    <script src="../../terminal/terminal.js"></script>
+    <link rel="stylesheet" href="../../terminal/term_styles.css">
 </head>
 
 <body>
-  <!-- navbar -->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-      <a href="../../index.html" class="brand-logo center">Learn To Git</a>
-    </div>
-  </nav>
-
-  <!-- sidebar -->
-  <ul id="slide-out" class="side-nav">
-    <li><a href="../intro.html">Introduction</a></li>
-    <li><a href="../getting_started.html">Getting started</a></li>
-    <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="init.html">Initializing the repository</a></li>
-              <li><a href="add.html">Adding files</a></li>
-              <li><a href="status.html">Checking the status</a></li>
-              <li><a href="commit.html">Committing changes</a></li>
-              <li><a href="branch.html">Branching</a></li>
-              <li><a href="remote.html">Adding a Remote Repository</a></li>
-              <li><a href="push_pull.html">Pushing &amp; pulling </a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <li><a href="../cheatsheet.html">CheatSheet</a></li>
-      <li><a href="../quiz/quiz.html">Quiz</a></li>
-      <li><a href="../reference.html">Reference</a></li>
-    </li>
-  </ul>
-
-  <a class="btn-floating btn-large waves-effect waves-light red forward-btn" href="remote.html"><i class="material-icons">forward</i></a>
-
-  <div class="container">
-    <!-- grid -->
-    <div class="row">
-      <!-- instruction -->
-      <div class="col m6">
-        <h2>Learn</h2>
-        <h4>Commiting changes</h4>
-        <p class="instruct-text">
-          To ensure you have added a file to staging area, check status of the project again by:
-          <code>git status</code>
-        </p>
-        <p class="instruct-text">
-          Notice there is new file added to be committed. Now that you have successfully added a file to staging area, you are supposed to commit the change that you have made with a message. Commiting is like keeping a log of changes made, which you can later
-          go restore to. To commit the change, enter the following the command
-          <br>
-          <code>git commit -m "add cat.txt"</code>
-      </div>
-      <!-- terminal -->
-      <div class="col m6">
-        <h5>Try It!</h5>
-        <div class="terminal-window" id="termWindow">
-          <header id="termHeader">
-            <div class="button green"></div>
-            <div class="button yellow"></div>
-            <div class="button red"></div>
-          </header>
-          <div id="termDiv1" style="position:relative; z-index:1;"></div>
+    <!-- navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+            <a href="../../index.html" class="brand-logo center">Learn To Git</a>
         </div>
-      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <ul id="slide-out" class="side-nav">
+        <li><a href="../intro.html">Introduction</a></li>
+        <li><a href="../getting_started.html">Getting started</a></li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="init.html">Initializing the repository</a></li>
+                            <li><a href="add.html">Adding files</a></li>
+                            <li><a href="status.html">Checking the status</a></li>
+                            <li><a href="commit.html">Committing changes</a></li>
+                            <li><a href="branch.html">Branching</a></li>
+                            <li><a href="remote.html">Adding a Remote Repository</a></li>
+                            <li><a href="push_pull.html">Pushing &amp; pulling </a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <li><a href="../cheatsheet.html">CheatSheet</a></li>
+            <li><a href="../quiz/quiz.html">Quiz</a></li>
+            <li><a href="../reference.html">Reference</a></li>
+        </li>
+    </ul>
+
+    <a class="btn-floating btn-large waves-effect waves-light red forward-btn" href="remote.html"><i class="material-icons">forward</i></a>
+
+    <div class="container">
+        <!-- grid -->
+        <div class="row">
+            <!-- instruction -->
+            <div class="col m6">
+                <h2>Learn</h2>
+                <h4>Commiting changes</h4>
+                <p class="instruct-text">
+                    To ensure you have added a file to staging area, check status of the project again by:
+                    <code>git status</code>
+                </p>
+                <p class="instruct-text">
+                    Notice there is new file added to be committed. Now that you have successfully added a file to staging area, you are supposed to commit the change that you have made with a message. Commiting is like keeping a log of changes made, which you can later go restore to. To commit the change, enter the following the command
+                    <br>
+                    <code>git commit -m "add cat.txt"</code>
+            </div>
+            <!-- terminal -->
+            <div class="col m6">
+                <h5>Try It!</h5>
+                <div class="terminal-window" id="termWindow">
+                    <header id="termHeader">
+                        <div class="button green"></div>
+                        <div class="button yellow"></div>
+                        <div class="button red"></div>
+                    </header>
+                    <div id="termDiv1" style="position:relative; z-index:1;"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-  </div>
-
-  <!-- modal for showing success -->
-  <div id="success-modal" class="modal">
-    <div class="modal-content success-modal">
-      <h3>SUCCESS!</h3>
-      <p>Congratulations! You have successfully initialized a repository</p>
-      <a class="waves-effect waves-light btn next-btn" href="remote.html">Continue to next step</a>
+    <!-- modal for showing success -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content success-modal">
+            <h3>SUCCESS!</h3>
+            <p>Congratulations! You have successfully initialized a repository</p>
+            <a class="waves-effect waves-light btn next-btn" href="remote.html">Continue to next step</a>
+        </div>
     </div>
-  </div>
 
 
-  <script>
-    // Initialize collapse button
-    $(".button-collapse").sideNav();
+    <script>
+        // Initialize collapse button
+        $(".button-collapse").sideNav();
 
-    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-    $('.collapsible').collapsible();
+        // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+        $('.collapsible').collapsible();
 
-    //run the terminal
-    $('document').ready(function() {
-      foo();
-    });
-  </script>
+        //run the terminal
+        $('document').ready(function () {
+            foo();
+        });
+    </script>
 
-  <script>
-    staged = ['cat.txt'];
-    //initialize an array of expected commands
-    expected = ['git status', 'git commit -m "add cat.txt"']
-  </script>
+    <script>
+        staged = ['cat.txt'];
+        //initialize an array of expected commands
+        expected = ['git status', 'git commit -m "add cat.txt"']
+    </script>
 
 </body>
 

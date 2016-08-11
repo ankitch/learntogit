@@ -2,335 +2,337 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Learn to Git</title>
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="../css/materialize.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/animate.css">
-  <script type="text/javascript" src="../js/jquery.min.js"></script>
-  <script src="../js/materialize.min.js"></script>
+    <meta charset="utf-8">
+    <title>Learn to Git</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
 
-  <style>
-    /*css of div container*/
-
-    #container {
-      height: 350px;
-      margin: 20px auto;
-      position: relative;
-    }
-    /*css of id image used in slider*/
-
-    .image {
-      height: 310px;
-      display: block;
-      margin: 0 auto;
-    }
-    /*css of left icon used in slider for positioning*/
-
-    #left_holder {
-      height: 450px;
-      width: 100px;
-      left: 0px;
-      top: 0px;
-    }
-    /*css of right icon used in slider for positioning*/
-
-    #right_holder {
-      height: 450px;
-      width: : 100px;
-      right: 0px;
-      top: 0px;
-    }
-    /*css of left icon*/
-
-    .left-arrow {
-      height: 50px;
-      width: 50px;
-      position: absolute;
-      top: 50%;
-      left: 0px;
-    }
-    /*css of right icon*/
-
-    .right-arrow {
-      height: 50px;
-      width: 50px;
-      position: absolute;
-      top: 50%;
-      right: 0px;
-    }
-
-    .pills {
-      width: 100%;
-    }
-
-    h4 {
-      cursor: pointer;
-    }
-
-    .main-header {
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    h6 {
-      font-size: 25px;
-      font-weight: bold;
-    }
-
-    #windows-div {
-      display: none;
-    }
-
-    #osx-div {
-      display: none;
-    }
-
-    #linux-div {
-      display: none;
-    }
-
-    .pills h7 {
-      display: inline-block;
-      text-align: center;
-      padding: 5px 0;
-      border-right: 1px solid black;
-      cursor: pointer;
-    }
-
-    .pills .win {
-      width: 33%;
-      border-left: 1px solid black;
-      font-weight: bold;
-    }
-
-    .pills .lin {
-      width: 33%;
-      font-weight: bold;
-    }
-
-    .pills .mac {
-      width: 33%;
-      font-weight: bold;
-    }
-
-    .pills .win:hover, .pills .mac:hover, .pills .lin:hover, .pills .active {
-      border-top: 3px solid #d32f2f;
-    }
-
-
-
-    .term-text {
-      background: #eff0f1;
-      padding: 2px;
-    }
-  </style>
+    <style>
+        /*css of div container*/
+        
+        #container {
+            height: 350px;
+            margin: 20px auto;
+            position: relative;
+        }
+        /*css of id image used in slider*/
+        
+        .image {
+            height: 310px;
+            display: block;
+            margin: 0 auto;
+        }
+        /*css of left icon used in slider for positioning*/
+        
+        #left_holder {
+            height: 450px;
+            width: 100px;
+            left: 0px;
+            top: 0px;
+        }
+        /*css of right icon used in slider for positioning*/
+        
+        #right_holder {
+            height: 450px;
+            width: : 100px;
+            right: 0px;
+            top: 0px;
+        }
+        /*css of left icon*/
+        
+        .left-arrow {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            left: 0px;
+        }
+        /*css of right icon*/
+        
+        .right-arrow {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            right: 0px;
+        }
+        
+        .pills {
+            width: 100%;
+        }
+        
+        h4 {
+            cursor: pointer;
+        }
+        
+        .main-header {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        h6 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        #windows-div {
+            display: none;
+        }
+        
+        #osx-div {
+            display: none;
+        }
+        
+        #linux-div {
+            display: none;
+        }
+        
+        .pills h7 {
+            display: inline-block;
+            text-align: center;
+            padding: 5px 0;
+            border-right: 1px solid black;
+            cursor: pointer;
+        }
+        
+        .pills .win {
+            width: 33%;
+            border-left: 1px solid black;
+            font-weight: bold;
+        }
+        
+        .pills .lin {
+            width: 33%;
+            font-weight: bold;
+        }
+        
+        .pills .mac {
+            width: 33%;
+            font-weight: bold;
+        }
+        
+        .pills .win:hover,
+        .pills .mac:hover,
+        .pills .lin:hover,
+        .pills .active {
+            border-top: 3px solid #d32f2f;
+        }
+        
+        .term-text {
+            background: #eff0f1;
+            padding: 2px;
+        }
+    </style>
 
 </head>
 
 <body>
-  <!-- navbar -->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-      <a href="../index.html" class="brand-logo center">Learn To Git</a>
-    </div>
-  </nav>
+    <!-- navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+            <a href="../index.html" class="brand-logo center">Learn To Git</a>
+        </div>
+    </nav>
 
-  <!-- sidebar -->
-  <ul id="slide-out" class="side-nav">
-    <li><a href="intro.html">Introduction</a></li>
-    <li><a href="getting_started.html">Getting started</a></li>
-    <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="learn/init.html">Initializing the repository</a></li>
-              <li><a href="learn/add.html">Adding files</a></li>
-              <li><a href="learn/status.html">Checking the status</a></li>
-              <li><a href="learn/commit.html">Committing changes</a></li>
-              <li><a href="learn/branch.html">Branching</a></li>
-              <li><a href="learn/remote.html">Adding a Remote Repository</a></li>
-              <li><a href="learn/push_pull.html">Pushing &amp; pulling </a></li>
+    <!-- sidebar -->
+    <ul id="slide-out" class="side-nav">
+        <li><a href="intro.html">Introduction</a></li>
+        <li><a href="getting_started.html">Getting started</a></li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Learn<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="learn/init.html">Initializing the repository</a></li>
+                            <li><a href="learn/add.html">Adding files</a></li>
+                            <li><a href="learn/status.html">Checking the status</a></li>
+                            <li><a href="learn/commit.html">Committing changes</a></li>
+                            <li><a href="learn/branch.html">Branching</a></li>
+                            <li><a href="learn/remote.html">Adding a Remote Repository</a></li>
+                            <li><a href="learn/push_pull.html">Pushing &amp; pulling </a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-          </div>
         </li>
-      </ul>
-    </li>
-    <li><a href="cheatsheet.html">CheatSheet</a></li>
-    <li><a href="quiz/quiz.html">Quiz</a></li>
-    <li><a href="pages/reference.html">Reference</a></li>
-  </ul>
+        <li><a href="cheatsheet.html">CheatSheet</a></li>
+        <li><a href="quiz/quiz.html">Quiz</a></li>
+        <li><a href="pages/reference.html">Reference</a></li>
+    </ul>
 
-  <a class="btn-floating btn-large waves-effect waves-light red forward-btn" href="learn/init.html"><i class="material-icons">forward</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light red forward-btn" href="learn/init.html"><i class="material-icons">forward</i></a>
 
-  <div class="container">
+    <div class="container">
 
-    <h3 class="main-header">Getting Started</h3>
-    <div class="pills">
-      <h7 class="win" id="wind">Windows</h7>
-      <h7 class="lin" id="linux">Linux</h7>
-      <h7 class="mac" id="osx">OSX</h7>
+        <h3 class="main-header">Getting Started</h3>
+        <div class="pills">
+            <h7 class="win" id="wind">Windows</h7>
+            <h7 class="lin" id="linux">Linux</h7>
+            <h7 class="mac" id="osx">OSX</h7>
+        </div>
+
+        <!-- windows section -->
+        <div id="windows-div">
+            <h6>How to download Git in Windows</h6>
+            <p class="instruct-text">You can find the installer on <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a> Follow the slider below to install git after you run the installer.
+                <div id="container">
+                    <img src="../images/image0.png" class="image" />
+
+                    <div id="left_holder">
+                        <img onClick="windowSlider.slide(-1)" class="left-arrow" src="../images/arrow_left.png">
+                    </div>
+
+                    <div id="right_holder">
+                        <img onClick="windowSlider.slide(+1)" class="right-arrow" src="../images/arrow_right.png" />
+                    </div>
+                </div>
+        </div>
+
+        <!-- linux section -->
+        <div id="linux-div">
+            <h6>How to download Git in Linux</h6>
+            <p class="instruct-text">In debian-based linux OS, open terminal and type <span class="term-text">sudo apt-get install git</span>. The process is shown clearly in the slider below you are supposed to follow</p>
+            <div id="container">
+                <img src="../images/imagelinx0.png" class="image" />
+                <!-- starting of div class left_holder -->
+                <div id="left_holders">
+                    <img onClick="linuxSlider.slide(-1)" class="left-arrow" src="../images/arrow_left.png" />
+                </div>
+                <!-- ending of div class left_holder -->
+                <!-- starting of div class right_holder -->
+                <div id="right_holders">
+                    <img onClick="linuxSlider.slide(+1)" class="right-arrow" src="../images/arrow_right.png" />
+                </div>
+            </div>
+        </div>
+
+        <!-- OSX section -->
+        <div id="osx-div">
+            <h6>How to download Git in OSX</h6>
+            <p class="instruct-text">You can find the installer on <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a> Follow the slider below to install git after you run the installer.</p>
+            <div id="container">
+                <img src="../images/imageosx0.png" class="image" />
+                <div id="left_holders">
+                    <img onClick="osxSlider.slide(-1)" class="left-arrow" src="../images/arrow_left.png" />
+                </div>
+                <div id="right_holders">
+                    <img onClick="osxSlider.slide(+1)" class="right-arrow" src="../images/arrow_right.png" />
+                </div>
+            </div>
+        </div>
+
+
     </div>
+    <!-- ./container -->
 
-    <!-- windows section -->
-    <div id="windows-div">
-      <h6>How to download Git in Windows</h6>
-      <p class="instruct-text">You can find the installer on <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a> Follow the slider below to install git after you run the installer.
-        <div id="container">
-          <img src="../images/image0.png" class="image" />
+    <!-- script for slider -->
+    <script type="text/javascript">
+        var Slider = function (total, img, num) {
+            this.count = 0;
+            this.total = total;
+            this.img = img;
+            this.slide = function (x) {
+                var image = document.getElementsByClassName('image')[num];
+                // var image = $('.image').eq(num);
+                this.count += x;
+                console.log(this.count);
+                console.log(this.total);
 
-          <div id="left_holder">
-            <img onClick="windowSlider.slide(-1)" class="left-arrow" src="../images/arrow_left.png">
-          </div>
+                if (this.count >= this.total) {
+                    $('.right-arrow').eq(num).css('display', 'none');
+                } else {
+                    $('.right-arrow').eq(num).css('display', 'block');
+                }
 
-          <div id="right_holder">
-            <img onClick="windowSlider.slide(+1)" class="right-arrow" src="../images/arrow_right.png" />
-          </div>
-        </div>
-    </div>
-
-    <!-- linux section -->
-    <div id="linux-div">
-      <h6>How to download Git in Linux</h6>
-      <p class="instruct-text">In debian-based linux OS, open terminal and type <span class="term-text">sudo apt-get install git</span>. The process is shown clearly in the slider below you are supposed to follow</p>
-      <div id="container">
-        <img src="../images/imagelinx0.png" class="image" />
-        <!-- starting of div class left_holder -->
-        <div id="left_holders">
-          <img onClick="linuxSlider.slide(-1)" class="left-arrow" src="../images/arrow_left.png" />
-        </div>
-        <!-- ending of div class left_holder -->
-        <!-- starting of div class right_holder -->
-        <div id="right_holders">
-          <img onClick="linuxSlider.slide(+1)" class="right-arrow" src="../images/arrow_right.png" />
-        </div>
-      </div>
-    </div>
-
-    <!-- OSX section -->
-    <div id="osx-div">
-      <h6>How to download Git in OSX</h6>
-      <p class="instruct-text">You can find the installer on <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a> Follow the slider below to install git after you run the installer.</p>
-      <div id="container">
-        <img src="../images/imageosx0.png" class="image" />
-        <div id="left_holders">
-          <img onClick="osxSlider.slide(-1)" class="left-arrow" src="../images/arrow_left.png" />
-        </div>
-        <div id="right_holders">
-          <img onClick="osxSlider.slide(+1)" class="right-arrow" src="../images/arrow_right.png" />
-        </div>
-      </div>
-    </div>
+                if (this.count <= 0) {
+                    $('.left-arrow').eq(num).css('display', 'none');
+                } else {
+                    $('.left-arrow').eq(num).css('display', 'block');
+                }
 
 
-  </div><!-- ./container -->
-
-  <!-- script for slider -->
-  <script type="text/javascript">
-    var Slider = function(total, img, num) {
-      this.count = 0;
-      this.total = total;
-      this.img = img;
-      this.slide = function(x) {
-        var image = document.getElementsByClassName('image')[num];
-        // var image = $('.image').eq(num);
-        this.count += x;
-        console.log(this.count);
-        console.log(this.total);
-
-        if (this.count >= this.total) {
-          $('.right-arrow').eq(num).css('display', 'none');
-        } else {
-          $('.right-arrow').eq(num).css('display', 'block');
+                image.src = "../images/" + this.img + this.count + ".png";
+            }
         }
 
-        if (this.count <= 0) {
-          $('.left-arrow').eq(num).css('display', 'none');
-        } else {
-          $('.left-arrow').eq(num).css('display', 'block');
-        }
-
-
-        image.src = "../images/" + this.img + this.count + ".png";
-      }
-    }
-
-    windowSlider = new Slider(10, 'image', 0);
-    linuxSlider = new Slider(3, 'imagelinx', 1);
-    osxSlider = new Slider(5, 'imageosx', 2);
-  </script>
+        windowSlider = new Slider(10, 'image', 0);
+        linuxSlider = new Slider(3, 'imagelinx', 1);
+        osxSlider = new Slider(5, 'imageosx', 2);
+    </script>
 
 
 
-  <script>
-    // Initialize collapse button
-    $(".button-collapse").sideNav();
+    <script>
+        // Initialize collapse button
+        $(".button-collapse").sideNav();
 
-    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-    $('.collapsible').collapsible();
-  </script>
-  <script>
-    var windowEntry = function() {
-      $("#windows-div").css({
-        "display": "block"
-      });
-      $("#osx-div").css({
-        "display": "none"
-      });
-      $("#linux-div").css({
-        "display": "none"
-      });
-      $("#windows-div").addClass('animated zoomInUp');
+        // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+        $('.collapsible').collapsible();
+    </script>
+    <script>
+        var windowEntry = function () {
+            $("#windows-div").css({
+                "display": "block"
+            });
+            $("#osx-div").css({
+                "display": "none"
+            });
+            $("#linux-div").css({
+                "display": "none"
+            });
+            $("#windows-div").addClass('animated zoomInUp');
 
-      $("#wind").addClass("active");
-      $("#osx").removeClass("active");
-      $("#linux").removeClass("active");
-    };
+            $("#wind").addClass("active");
+            $("#osx").removeClass("active");
+            $("#linux").removeClass("active");
+        };
 
-    $("#wind").on("click", windowEntry);
+        $("#wind").on("click", windowEntry);
 
-    var osxEntry = function() {
-      $("#osx-div").css({
-        "display": "block"
-      });
-      $("#linux-div").css({
-        "display": "none"
-      });
-      $("#windows-div").css({
-        "display": "none"
-      });
-      $("#osx-div").addClass('animated zoomInUp');
+        var osxEntry = function () {
+            $("#osx-div").css({
+                "display": "block"
+            });
+            $("#linux-div").css({
+                "display": "none"
+            });
+            $("#windows-div").css({
+                "display": "none"
+            });
+            $("#osx-div").addClass('animated zoomInUp');
 
-      $("#wind").removeClass("active");
-      $("#osx").addClass("active");
-      $("#linux").removeClass("active");
-    };
+            $("#wind").removeClass("active");
+            $("#osx").addClass("active");
+            $("#linux").removeClass("active");
+        };
 
-    $("#osx").on("click", osxEntry);
+        $("#osx").on("click", osxEntry);
 
-    var linuxEntry = function() {
-      $("#linux-div").css({
-        "display": "block"
-      });
-      $("#osx-div").css({
-        "display": "none"
-      });
-      $("#windows-div").css({
-        "display": "none"
-      });
-      $("#linux-div").addClass('animated zoomInUp');
+        var linuxEntry = function () {
+            $("#linux-div").css({
+                "display": "block"
+            });
+            $("#osx-div").css({
+                "display": "none"
+            });
+            $("#windows-div").css({
+                "display": "none"
+            });
+            $("#linux-div").addClass('animated zoomInUp');
 
-      $("#wind").removeClass("active");
-      $("#osx").removeClass("active");
-      $("#linux").addClass("active");
-    };
+            $("#wind").removeClass("active");
+            $("#osx").removeClass("active");
+            $("#linux").addClass("active");
+        };
 
-    $("#linux").on("click", linuxEntry);
-  </script>
+        $("#linux").on("click", linuxEntry);
+    </script>
 
 </body>
 
